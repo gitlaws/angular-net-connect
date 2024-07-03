@@ -92,8 +92,5 @@
         }
       }
     }
-  },
-  "scripts": {
-    "deploy": "ng build --configuration production --base-href \"https://gitlaws.github.io/angular-net-connect/\" && npx angular-cli-ghpages --dir=dist/angular-net-connect"
   }
 }
