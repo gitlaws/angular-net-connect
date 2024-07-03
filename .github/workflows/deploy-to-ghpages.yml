@@ -17,6 +17,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: ng build --prod --base-href "https://gitlaws.github.io/angular-net-connect/"
+        run: ng build --configuration production --base-href "https://gitlaws.github.io/angular-net-connect/"
       - name: Deploy
         run: npx angular-cli-ghpages --dir=dist/angular-net-connect
