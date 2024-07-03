@@ -16,6 +16,8 @@ jobs:
           node-version: '22.4.0'
       - name: Install Dependencies
         run: npm install
+      - name: Install Angular CLI and GH Pages
+        run: npm install -g @angular/cli angular-cli-ghpages
       - name: Build
         run: ng build --configuration production --base-href "https://gitlaws.github.io/angular-net-connect/"
       - name: Deploy
