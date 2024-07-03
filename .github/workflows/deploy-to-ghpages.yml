@@ -1,0 +1,22 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Set to your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: ng build --prod --base-href "https://gitlaws.github.io/angular-net-connect/"
+      - name: Deploy
+        run: npx angular-cli-ghpages --dir=dist/angular-net-connect
