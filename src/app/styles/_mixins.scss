@@ -1,0 +1,5 @@
+@import "./colors";
+
+@mixin color($color) {
+  color: map-get($colors, $color);
+}
