@@ -1,5 +1,21 @@
 @import "./colors";
 
-@mixin color($color) {
-  color: map-get($colors, $color);
+/* Header Box-shadow */
+@mixin header-box-shadow($h-offset, $v-offset, $blur, $spread, $color) {
+  box-shadow: $h-offset $v-offset $blur $spread $color;
+}
+
+/* Toolbar Mixins */
+@mixin shine-animation($duration, $timing-function, $iteration) {
+  @keyframes shine {
+    0%,
+    100% {
+      background-position: -200px;
+    }
+    50% {
+      background-position: calc(200px + 100%);
+    }
+  }
+
+  animation: shine $duration $timing-function $iteration;
 }
