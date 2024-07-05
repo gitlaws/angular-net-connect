@@ -1,12 +1,20 @@
 /* Global Theme Mode Colors */
 $lm-toolbar-background-color: #d3d3d3;
 $dm-toolbar-background-color: #121212;
+$body-bg-color: #fafafa;
 
 /* Toolbar Menu Colors */
-$toolbar-background-color: #c0c0c0;
+$toolbar-background-color: #d3d3d3;
 
 /* Cyber Menu Colors */
 $cybermenu-bg-color: #333333;
+// $dropdown-menu-bg-color: #5f9ea0; // Cadet Blue
+// $dropdown-menu-bg-color: #00416a; // Indigo Dye
+$dropdown-menu-bg-color: #5f8a8b; // Steel Teal
+// $dropdown-menu-bg-color: #4f666a; // Stormcloud
+// $dropdown-menu-bg-color: #367588; // Teal Blue
+// $dropdown-menu-bg-color: #0f4d92; // Yale Blue
+
 $hover-color: #ff2079;
 $transition-effect: all 0.3s ease;
 $secondary-bg-color: #0f0f0f;
@@ -19,4 +27,3 @@ $accent-color: #ff00ff;
 $dark-color: rgba(60, 60, 60, 1);
 $warning-color: #ffff00;
 $black-color: rgba(33, 33, 33, 1);
-
