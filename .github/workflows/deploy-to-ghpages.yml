@@ -27,4 +27,4 @@ jobs:
         run: ng build --configuration production --base-href "https://gitlaws.github.io/angular-net-connect/"
         
       - name: Deploy
-        run: npx angular-cli-ghpages --dir=dist/angular-net-connect
+        run: npx angular-cli-ghpages --dir=dist/angular-net-connect/browser
