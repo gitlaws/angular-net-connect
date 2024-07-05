@@ -1,4 +1,4 @@
-/* Global Fonts / Imported Styles */
+/* Import _PartialStyles */
 @import "./styles/_variables.scss";
 @import "./styles/_mixins.scss";
 @import "./styles/_colors.scss";
@@ -11,7 +11,7 @@
   font-family: "Raleway", sans-serif;
 }
 
-/* Fonts */
+/* Global Fonts */
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap");
