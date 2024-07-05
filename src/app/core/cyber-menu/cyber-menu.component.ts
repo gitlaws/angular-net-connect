@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cyber-menu',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './cyber-menu.component.html',
   styleUrl: './cyber-menu.component.scss',
 })
