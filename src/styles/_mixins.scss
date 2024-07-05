@@ -19,3 +19,58 @@
 
   animation: shine $duration $timing-function $iteration;
 }
+
+/* Cube Logo Mixins */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Cyber Menu Mixins */
+@mixin glow-animation($duration, $iteration) {
+  @keyframes glow {
+    0% {
+      stroke: #b3b3b3;
+    }
+    50% {
+      stroke: #808080;
+    }
+    100% {
+      stroke: #b3b3b3;
+    }
+  }
+
+  animation: glow $duration $iteration;
+}
+
+@mixin fadeInDown-animation($duration, $timing-function, $fill-mode) {
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  animation: fadeInDown $duration $timing-function $fill-mode;
+}
+
+@mixin fadeInUp-animation {
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
