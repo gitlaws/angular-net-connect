@@ -41,6 +41,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "lru-cache": "^10.3.0",
-    "typescript": "~5.4.0"
+    "typescript": "^5.4.5"
+  },
+  "resolutions": {
+    "gh-pages": "^6.1.1"
   }
 }
