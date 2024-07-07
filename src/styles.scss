@@ -2,6 +2,7 @@
 @import "./styles/_variables.scss";
 @import "./styles/_mixins.scss";
 @import "./styles/_colors.scss";
+@import "@fortawesome/fontawesome-free/css/all.css";
 
 * {
   scroll-behavior: smooth;
@@ -42,7 +43,7 @@ textarea {
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,900&display=swap");
-@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import "~@fortawesome/fontawesome-free/css/all.css";
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
