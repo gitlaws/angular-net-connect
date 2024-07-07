@@ -15,6 +15,26 @@ body {
   background-color: #f5f5f5;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+i {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+}
+
 /* Global Fonts */
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap");
