@@ -7,7 +7,9 @@
 </button>
 
 <ul *ngIf="isMenuOpen" class="dropdown-menu" (click)="$event.stopPropagation()">
-  <li class="dropdown-item"><a routerLink="/components">Components</a></li>
+  <li class="dropdown-item">
+    <a routerLink="/component-documentation">Components</a>
+  </li>
   <li class="dropdown-item"><a routerLink="/services">Services</a></li>
   <li class="dropdown-item"><a routerLink="/pipes">Pipes</a></li>
   <li class="dropdown-item"><a routerLink="/directives">Directives</a></li>
