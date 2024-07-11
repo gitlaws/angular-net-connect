@@ -8,7 +8,7 @@ export const routes: Routes = [
   //   },
 
   {
-    path: 'Component-Documentation',
+    path: 'components', // Updated to match the routerLink path
     loadComponent: () =>
       import(
         './components/component-documentation/component-documentation.component'
