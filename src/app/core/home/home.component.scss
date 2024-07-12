@@ -1,0 +1,52 @@
+@import "../../../styles/_colors.scss";
+@import "../../../styles/_mixins.scss";
+@import "../../../styles/_variables.scss";
+
+.intro-section {
+  position: relative;
+  text-align: center;
+  padding: 150px 0;
+  margin-top: 100px;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 1;
+  // max-width: 800px;
+  margin: 0 auto;
+  // height: 500px;
+}
+
+.intro-headline {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  // background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+  // background: linear-gradient(to right, #ff2079 0%, #4a00e0 100%);
+  // background: linear-gradient(to right, #ff00c8 0%, #333399 100%);
+  // background: linear-gradient(to right, #ff0000 0%, #0000ff 100%);
+  // background: linear-gradient(to right, #00ff00 0%, #ff00ff 100%);
+  background: linear-gradient(to right, #ff00ff 0%, #00ffff 100%);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-description {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: white;
+}
