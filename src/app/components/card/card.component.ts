@@ -1,13 +1,12 @@
-import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-card',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss'], // Corrected property name and made it an array
+  styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
   @Input() public title = '';

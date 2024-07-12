@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
-import { CardComponent } from '../card/card.component';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-component-documentation',
   standalone: true,
+  imports: [CommonModule, CardComponent],
   templateUrl: './component-documentation.component.html',
   styleUrls: [
     './component-documentation.component.scss',
     '../card/card.component.scss',
   ],
-  imports: [CommonModule, CardComponent],
 })
 export class ComponentDocumentationComponent {}
