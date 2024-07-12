@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-component-documentation',
   standalone: true,
   templateUrl: './component-documentation.component.html',
-  styleUrls: ['./component-documentation.component.scss'], // Corrected property name from 'styleUrl' to 'styleUrls'
+  styleUrl: './component-documentation.component.scss',
   imports: [CommonModule, CardComponent],
 })
 export class ComponentDocumentationComponent {}
