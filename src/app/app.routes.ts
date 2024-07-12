@@ -8,12 +8,12 @@ export const routes: Routes = [
   },
 
   {
-    path: 'home',
+    path: 'Home',
     loadComponent: () =>
       import('./core/home/home.component').then((m) => m.HomeComponent),
   },
   {
-    path: 'components',
+    path: 'Components',
     loadComponent: () =>
       import(
         './components/component-documentation/component-documentation.component'
