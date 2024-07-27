@@ -1,33 +1,39 @@
 @import "../../../styles.scss";
 @import "../../../styles/_mixins.scss";
 
-.card-container {
-  display: grid;
-  grid-gap: 10px;
+.card {
+  display: flex;
+  flex-direction: column;
   border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 10px;
+  overflow: hidden;
 
-  // @include box-shadow();
-
-  .header {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-gap: 10px;
+  .card-header {
+    display: flex;
     align-items: center;
     padding: 10px;
     background-color: #007bff;
     color: white;
 
-    .title {
-      display: grid;
-      grid-gap: 10px;
-      grid-template-columns: auto 1fr;
-      align-items: center;
+    i {
+      margin-right: 10px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: normal;
     }
   }
 
-  .body,
-  .footer {
+  .card-body {
     padding: 10px;
+    background-color: #f8f9fa;
   }
 }
