@@ -18,11 +18,7 @@ export const routes: Routes = [
         './components/component-documentation/component-documentation.component'
       ).then((component) => component.ComponentDocumentationComponent),
   },
-  {
-    path: 'card',
-    loadChildren: () =>
-      import('./components/card/card.component').then((c) => c.CardComponent),
-  },
+
   // Assuming components exist for these paths, add them similarly
   // {
   // path: 'services',
