@@ -3,17 +3,17 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadChildren: () =>
+    loadComponent: () =>
       import('./core/home/home.component').then((m) => m.HomeComponent),
   },
   {
     path: 'Home',
-    loadChildren: () =>
+    loadComponent: () =>
       import('./core/home/home.component').then((m) => m.HomeComponent),
   },
   {
     path: 'components',
-    loadChildren: () =>
+    loadComponent: () =>
       import(
         './components/component-documentation/component-documentation.component'
       ).then((component) => component.ComponentDocumentationComponent),

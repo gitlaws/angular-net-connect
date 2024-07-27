@@ -1,4 +1,3 @@
-// components/component-documentation/component-documentation.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from '../card/card.component';
