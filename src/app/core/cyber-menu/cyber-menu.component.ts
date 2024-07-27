@@ -5,7 +5,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-cyber-menu',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './cyber-menu.component.html',
   styleUrl: './cyber-menu.component.scss',
 })
@@ -19,14 +19,11 @@ export class CyberMenuComponent {
   constructor(private elementRef: ElementRef) {}
 
   ngOnDestroy(): void {
-    // Remove the click event listener from the document
     document.removeEventListener('click', this.documentClickHandler.bind(this));
   }
 
   documentClickHandler(event: MouseEvent) {
-    // Check if the click event is coming from within the dropdown content
     if (!this.elementRef.nativeElement.contains(event.target)) {
-      // If not, close the dropdown
       this.isMenuOpen = false;
     }
   }
