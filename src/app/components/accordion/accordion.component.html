@@ -10,7 +10,7 @@
     </div>
 
     <div class="content" [class.is-expanded]="item.isExpanded">
-      <p>{{ item.content }}</p>
+      <ng-content select="[body]"></ng-content>
     </div>
   </div>
 </div>

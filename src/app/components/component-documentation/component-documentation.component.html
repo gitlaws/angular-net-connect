@@ -12,7 +12,11 @@
     [title]="'Test'"
     [subTitle]="'Component'"
   >
-    <!-- <app-footer body></app-footer> -->
-    <app-accordion body></app-accordion>
+    <app-accordion>
+      <div body>
+        <p>Projected content inside accordion</p>
+      </div>
+    </app-accordion>
+    <div footer>This is the footer content</div>
   </app-card>
 </div>
