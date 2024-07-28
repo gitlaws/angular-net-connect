@@ -7,5 +7,12 @@
 </app-card> -->
 <div class="wrapper">
   <div>Static content: Test Complete</div>
-  <app-card></app-card>
+  <app-card
+    [iconClasses]="'fas fa-info-circle'"
+    [title]="'Footer'"
+    [subTitle]="'Components'"
+  >
+    <!-- <app-footer body></app-footer> -->
+    <app-accordion body></app-accordion>
+  </app-card>
 </div>
