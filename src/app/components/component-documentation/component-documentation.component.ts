@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CardComponent } from '../card/card.component';
 import { RouterLink } from '@angular/router';
 import { AccordionComponent } from '../accordion/accordion.component';
+import { AccordionItem } from '../accordion/accordion-item.interface';
 
 @Component({
   selector: 'app-component-documentation',
@@ -14,4 +15,14 @@ import { AccordionComponent } from '../accordion/accordion.component';
     '../card/card.component.scss',
   ],
 })
-export class ComponentDocumentationComponent {}
+export class ComponentDocumentationComponent {
+  public accordionItems: AccordionItem[] = [
+    { title: 'Item 1', content: 'Content for item 1', isExpanded: false },
+    { title: 'Item 2', content: 'Content for item 2', isExpanded: false },
+    // Add more items as needed
+  ];
+
+  toggle(item: any) {
+    item.isExpanded = !item.isExpanded;
+  }
+}
