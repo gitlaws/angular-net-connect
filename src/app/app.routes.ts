@@ -28,6 +28,22 @@ export const routes: Routes = [
   },
 
   {
+    path: 'pipes',
+    loadComponent: () =>
+      import('./pipes/pipe-documentation/pipe-documentation.component').then(
+        (component) => component.PipeDocumentationComponent
+      ),
+  },
+
+  {
+    path: 'directives',
+    loadComponent: () =>
+      import(
+        './directives/directive-documentation/directive-documentation.component'
+      ).then((component) => component.DirectiveDocumentationComponent),
+  },
+
+  {
     path: 'apis',
     loadComponent: () =>
       import('./apis/api-documentation/api-documentation.component').then(
