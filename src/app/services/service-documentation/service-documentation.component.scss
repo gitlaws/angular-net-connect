@@ -1,3 +1,5 @@
+@import "../../../styles/colors.scss";
+
 .wrapper {
   margin-top: 120px;
   padding: 20px;
@@ -11,7 +13,7 @@ div[body] {
 }
 
 .snackbar-button {
-  background-color: #007bff; /* Primary color */
+  background-color: $snackbar-button-color;
   border: none;
   color: white;
   padding: 10px 20px;
