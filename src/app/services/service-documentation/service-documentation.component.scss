@@ -28,5 +28,5 @@ div[body] {
 }
 
 .snackbar-button:hover {
-  background-color: #0056b3; /* Darker shade for hover effect */
+  background-color: $snackbar-button-hover-color;
 }
