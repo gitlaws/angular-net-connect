@@ -21,8 +21,4 @@ export class ComponentDocumentationComponent {
     { title: 'Item 2', content: 'Content for item 2', isExpanded: false },
     // Add more items as needed
   ];
-
-  toggle(item: any) {
-    item.isExpanded = !item.isExpanded;
-  }
 }
