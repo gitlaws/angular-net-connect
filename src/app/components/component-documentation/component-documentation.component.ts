@@ -17,8 +17,18 @@ import { AccordionItem } from '../accordion/accordion-item.interface';
 })
 export class ComponentDocumentationComponent {
   public accordionItems: AccordionItem[] = [
-    { title: 'Item 1', content: 'Content for item 1', isExpanded: false },
-    { title: 'Item 2', content: 'Content for item 2', isExpanded: false },
+    {
+      title: 'Item 1',
+      content:
+        'Content for item 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, delectus et quidem consectetur incidunt, doloremque facere illo rem aliquam quam perspiciatis voluptatum dolorum nemo molestiae accusantium deserunt odit nesciunt recusandae.',
+      isExpanded: false,
+    },
+    {
+      title: 'Item 2',
+      content:
+        'Content for item 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, delectus et quidem consectetur incidunt, doloremque facere illo rem aliquam quam perspiciatis voluptatum dolorum nemo molestiae accusantium deserunt odit nesciunt recusandae.',
+      isExpanded: false,
+    },
     // Add more items as needed
   ];
 }

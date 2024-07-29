@@ -1,3 +1,4 @@
+@import "../../../styles/colors.scss";
 @import "../../../styles/_mixins.scss";
 
 $padding: 10px 20px;
@@ -7,15 +8,16 @@ $padding: 10px 20px;
 
   .item {
     border-bottom: 1px solid rgb(221, 221, 221);
-
+    background-color: $accordion-item-color;
     .header {
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: center;
       padding: $padding;
+      background-color: $accordion-header-color;
 
       i {
-        color: blueviolet;
+        color: $chevron-color;
         transition: all 0.3s;
 
         &.is-expanded {
