@@ -26,4 +26,12 @@ export const routes: Routes = [
         './services/service-documentation/service-documentation.component'
       ).then((component) => component.ServiceDocumentationComponent),
   },
+
+  {
+    path: 'apis',
+    loadComponent: () =>
+      import('./apis/api-documentation/api-documentation.component').then(
+        (component) => component.ApiDocumentationComponent
+      ),
+  },
 ];
