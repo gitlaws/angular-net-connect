@@ -2,3 +2,29 @@
   margin-top: 120px;
   padding: 20px;
 }
+
+div[body] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Optional: Adjust based on your layout */
+}
+
+.snackbar-button {
+  background-color: #007bff; /* Primary color */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.snackbar-button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
