@@ -1,18 +1,34 @@
-<table *ngIf="tableData && tableData.length">
-  <thead>
-    <tr>
-      <th
-        *ngFor="let header of tableData[0] | keyvalue"
-        (click)="headerSelection(header.key, header.value)"
-      >
-        {{ header.key }}
-      </th>
-    </tr>
-  </thead>
+<div class="table-container">
+  <input
+    type="text"
+    placeholder="Search..."
+    (input)="filterData()"
+    aria-label="Search"
+  />
 
-  <tbody>
-    <tr *ngFor="let row of tableData">
-      <td *ngFor="let data of row | keyvalue">{{ data.value }}</td>
-    </tr>
-  </tbody>
-</table>
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th (click)="sortData('title')">Title</th>
+        <th (click)="sortData('date')">Date</th>
+        <th>Explanation</th>
+        <th>Media</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of filteredData">
+        <td>{{ item["title"] }}</td>
+        <td>{{ item["date"] }}</td>
+        <td>{{ item["explanation"] }}</td>
+        <td>
+          <ng-container *ngIf="item['media_type'] === 'image'">
+            <img [src]="item['url']" alt="{{ item['title'] }}" width="100" />
+          </ng-container>
+          <ng-container *ngIf="item['media_type'] === 'video'">
+            <a [href]="item['url']" target="_blank">Watch Video</a>
+          </ng-container>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
