@@ -1,3 +1,14 @@
 <div class="wrapper">
   <p>Static content: Test Complete - Directives</p>
+
+  <app-card
+    [iconClasses]="'fas fa-info-circle'"
+    [title]="'Copy Directive'"
+    [subTitle]="'Directive'"
+  >
+    <div body>
+      <p>{{ textToCopy }}</p>
+      <button [appCopy]="textToCopy">Copy Text</button>
+    </div>
+  </app-card>
 </div>

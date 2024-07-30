@@ -25,12 +25,6 @@ import { SimpleTableComponent } from '../simple-table/simple-table.component';
   ],
 })
 export class ComponentDocumentationComponent {
-  openModal() {
-    throw new Error('Method not implemented.');
-  }
-  closeModal() {
-    throw new Error('Method not implemented.');
-  }
   public accordionItems: AccordionItem[] = [
     {
       title: 'Item 1',
