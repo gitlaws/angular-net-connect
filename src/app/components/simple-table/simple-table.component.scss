@@ -6,6 +6,7 @@
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  overflow-x: auto; /* Allow horizontal scrolling */
 
   input {
     width: 100%;
@@ -14,6 +15,11 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    &:focus {
+      border-color: #007bff;
+      outline: none;
+    }
   }
 
   table.custom-table {
@@ -22,15 +28,30 @@
     font-family: "Arial", sans-serif;
 
     thead {
-      background-color: #f4f4f4;
+      background-color: #007bff;
+      color: #fff;
 
       th {
         padding: 10px;
         text-align: left;
         cursor: pointer;
         border-bottom: 2px solid #ddd;
+        position: relative;
+        transition: background-color 0.3s ease;
         &:hover {
-          background-color: #e0e0e0;
+          background-color: #0056b3;
+        }
+        &.sort-asc::after {
+          content: "▲";
+          position: absolute;
+          right: 10px;
+          font-size: 12px;
+        }
+        &.sort-desc::after {
+          content: "▼";
+          position: absolute;
+          right: 10px;
+          font-size: 12px;
         }
       }
     }
@@ -47,10 +68,90 @@
           background-color: #d0d0d0;
           cursor: pointer;
         }
-
         td {
           padding: 10px;
-          border-bottom: 1px solid #ddd;
+          word-wrap: break-word; /* Enable word wrapping */
+          white-space: normal; /* Allow text to wrap */
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 5px;
+
+    input {
+      padding: 8px;
+    }
+
+    table.custom-table {
+      font-size: 14px;
+
+      thead {
+        th {
+          padding: 8px;
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    input {
+      padding: 6px;
+    }
+
+    table.custom-table {
+      font-size: 12px;
+
+      thead {
+        th {
+          padding: 6px;
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+    table.custom-table {
+      display: block; /* Collapse table into block */
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block; /* Make elements block-level */
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+        &:before {
+          content: attr(
+            data-label
+          ); /* Use data-label attribute for column names */
+          position: absolute;
+          left: 0;
+          width: 50%;
+          padding-left: 10px;
+          font-weight: bold;
           text-align: left;
         }
       }
