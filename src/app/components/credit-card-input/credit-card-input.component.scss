@@ -1,3 +1,12 @@
+:root {
+  --primary-color: #007bff;
+  --hover-color: #0056b3;
+  --background-color: #f9f9f9;
+  --focus-background-color: #e6f7ff;
+  --text-color: #444;
+  --error-color: #d9534f;
+}
+
 .credit-card-input-container {
   display: flex;
   flex-direction: column;
@@ -13,7 +22,7 @@
   .credit-card-label {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #444;
+    color: var(--text-color);
   }
 
   .input-wrapper {
@@ -23,11 +32,11 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 12px;
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
     transition: border-color 0.3s, box-shadow 0.3s;
 
     &:focus-within {
-      border-color: #007bff;
+      border-color: var(--primary-color);
       box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
     }
 
@@ -38,8 +47,15 @@
     }
 
     .spaced-icon {
-      font-size: 1.5rem;
-      color: #666;
+      font-size: 2rem; /* Increased size for better visibility */
+      color: var(--primary-color); /* Consistent color scheme */
+      padding: 4px; /* Padding around the icons */
+      transition: transform 0.3s, color 0.3s; /* Smooth transition for hover effect */
+
+      &:hover {
+        transform: scale(1.1); /* Slightly enlarge the icon on hover */
+        color: var(--hover-color); /* Darker shade on hover */
+      }
     }
 
     .credit-card-input {
@@ -52,7 +68,7 @@
       transition: background-color 0.3s;
 
       &:focus {
-        background-color: #e6f7ff;
+        background-color: var(--focus-background-color);
       }
 
       &::placeholder {
@@ -63,6 +79,21 @@
 
   .validation-message {
     font-size: 0.9rem;
-    color: #d9534f;
+    color: var(--error-color);
   }
+
+  //   @media (max-width: 600px) {
+  //     .input-wrapper {
+  //       flex-direction: column;
+  //       align-items: flex-start;
+
+  //       .icon-container {
+  //         margin-bottom: 8px;
+  //       }
+
+  //       .credit-card-input {
+  //         width: 100%;
+  //       }
+  //     }
+  //   }
 }
