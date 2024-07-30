@@ -12,5 +12,5 @@ import { CopyDirective } from '../copy/copy.directive';
   styleUrls: ['./directive-documentation.component.scss'],
 })
 export class DirectiveDocumentationComponent {
-  textToCopy: any;
+  textToCopy: string = 'This is the text to be copied';
 }
