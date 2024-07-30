@@ -1,15 +1,19 @@
 .credit-card-input-container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   max-width: 400px;
   margin: 0 auto;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   .credit-card-label {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
+    color: #444;
   }
 
   .input-wrapper {
@@ -17,19 +21,20 @@
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 8px;
+    border-radius: 8px;
+    padding: 12px;
     background-color: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
 
     &:focus-within {
       border-color: #007bff;
-      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+      box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
     }
 
     .icon-container {
       display: flex;
       align-items: center;
-      margin-right: 8px;
+      margin-right: 12px;
     }
 
     .spaced-icon {
@@ -44,10 +49,20 @@
       padding: 8px;
       font-size: 1rem;
       background-color: transparent;
+      transition: background-color 0.3s;
+
+      &:focus {
+        background-color: #e6f7ff;
+      }
 
       &::placeholder {
         color: #aaa;
       }
     }
+  }
+
+  .validation-message {
+    font-size: 0.9rem;
+    color: #d9534f;
   }
 }
