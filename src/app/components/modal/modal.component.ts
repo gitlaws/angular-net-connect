@@ -1,21 +1,33 @@
-import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  HostListener,
+} from '@angular/core';
 
 @Component({
   selector: 'app-modal',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './modal.component.html',
-  styleUrl: './modal.component.scss',
+  styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent {
   @Input() public title = '';
-  public isHidden = true;
+  @Input() public isHidden = true;
+  @Output() public close = new EventEmitter<void>();
 
-  public close(): void {
+  public closeModal(): void {
     this.isHidden = true;
+    this.close.emit();
   }
 
-  public open(): void {
-    this.isHidden = false;
+  @HostListener('document:keydown.escape', ['$event'])
+  handleEscape(event: KeyboardEvent): void {
+    if (!this.isHidden) {
+      this.closeModal();
+    }
   }
 }
