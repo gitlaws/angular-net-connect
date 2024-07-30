@@ -6,7 +6,6 @@ import { AccordionComponent } from '../accordion/accordion.component';
 import { AccordionItem } from '../accordion/accordion-item.interface';
 import { CreditCardInputComponent } from '../credit-card-input/credit-card-input.component';
 import { SimpleTableComponent } from '../simple-table/simple-table.component';
-import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-component-documentation',
@@ -18,7 +17,6 @@ import { ModalComponent } from '../modal/modal.component';
     AccordionComponent,
     CreditCardInputComponent,
     SimpleTableComponent,
-    ModalComponent,
   ],
   templateUrl: './component-documentation.component.html',
   styleUrls: [
@@ -27,6 +25,12 @@ import { ModalComponent } from '../modal/modal.component';
   ],
 })
 export class ComponentDocumentationComponent {
+  openModal() {
+    throw new Error('Method not implemented.');
+  }
+  closeModal() {
+    throw new Error('Method not implemented.');
+  }
   public accordionItems: AccordionItem[] = [
     {
       title: 'Item 1',
