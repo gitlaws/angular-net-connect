@@ -20,7 +20,7 @@
       maxlength="16"
       [readonly]="isReadonly"
       placeholder="Enter your credit card number"
-      class="credit-card-input"
     />
   </div>
+  <div footer>Authentication: {{ isValidCard() ? "Valid" : "Invalid" }}</div>
 </div>
