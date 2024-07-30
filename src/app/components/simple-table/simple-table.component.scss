@@ -1,8 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap");
 @import "../../../styles/colors.scss";
 
 .table-container {
@@ -23,6 +19,7 @@
     border-radius: 5px;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
+    font-family: "Roboto", sans-serif;
     &:focus {
       border-color: $focus-border-color;
       outline: none;
@@ -32,11 +29,12 @@
   table.custom-table {
     width: 100%;
     border-collapse: collapse;
-    font-family: "Roboto", sans-serif; // Change this to any of the imported fonts
+    font-family: "Roboto", sans-serif;
 
     thead {
       background-color: $thead-background-color;
       color: $thead-color;
+      font-family: "Montserrat", sans-serif;
 
       th {
         padding: 12px;
