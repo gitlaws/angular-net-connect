@@ -5,6 +5,7 @@ import { RouterLink } from '@angular/router';
 import { AccordionComponent } from '../accordion/accordion.component';
 import { AccordionItem } from '../accordion/accordion-item.interface';
 import { CreditCardInputComponent } from '../credit-card-input/credit-card-input.component';
+import { SimpleTableComponent } from '../simple-table/simple-table.component';
 
 @Component({
   selector: 'app-component-documentation',
@@ -15,6 +16,7 @@ import { CreditCardInputComponent } from '../credit-card-input/credit-card-input
     RouterLink,
     AccordionComponent,
     CreditCardInputComponent,
+    SimpleTableComponent,
   ],
   templateUrl: './component-documentation.component.html',
   styleUrls: [
