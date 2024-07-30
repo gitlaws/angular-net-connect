@@ -1,23 +1,25 @@
+@import "../../../styles/colors.scss";
+
 .table-container {
   max-width: 100%;
   margin: 20px auto;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  padding: 15px;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px $box-shadow-color;
+  background-color: $background-color;
   overflow-x: auto; /* Allow horizontal scrolling */
 
   input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid $border-color;
     border-radius: 5px;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
     &:focus {
-      border-color: #007bff;
+      border-color: $focus-border-color;
       outline: none;
     }
   }
@@ -28,18 +30,17 @@
     font-family: "Arial", sans-serif;
 
     thead {
-      background-color: #007bff;
-      color: #fff;
+      background-color: $thead-background-color;
+      color: $thead-color;
 
       th {
-        padding: 10px;
+        padding: 12px;
         text-align: left;
-        cursor: pointer;
-        border-bottom: 2px solid #ddd;
+        border-bottom: 2px solid $border-color;
         position: relative;
         transition: background-color 0.3s ease;
         &:hover {
-          background-color: #0056b3;
+          background-color: $thead-hover-background-color;
         }
         &.sort-asc::after {
           content: "▲";
@@ -59,17 +60,16 @@
     tbody {
       tr {
         &:nth-child(odd) {
-          background-color: #f9f9f9;
+          background-color: $tbody-odd-background-color;
         }
         &:nth-child(even) {
-          background-color: #e0e0e0;
+          background-color: $tbody-even-background-color;
         }
         &:hover {
-          background-color: #d0d0d0;
-          cursor: pointer;
+          background-color: $tbody-hover-background-color;
         }
         td {
-          padding: 10px;
+          padding: 12px;
           word-wrap: break-word; /* Enable word wrapping */
           white-space: normal; /* Allow text to wrap */
           overflow: hidden;
@@ -79,14 +79,38 @@
   }
 
   @media (max-width: 768px) {
-    padding: 5px;
+    padding: 10px;
 
+    input {
+      padding: 10px;
+    }
+
+    table.custom-table {
+      font-size: 14px;
+
+      thead {
+        th {
+          padding: 10px;
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
     input {
       padding: 8px;
     }
 
     table.custom-table {
-      font-size: 14px;
+      font-size: 12px;
 
       thead {
         th {
@@ -98,30 +122,6 @@
         tr {
           td {
             padding: 8px;
-          }
-        }
-      }
-    }
-  }
-
-  @media (max-width: 480px) {
-    input {
-      padding: 6px;
-    }
-
-    table.custom-table {
-      font-size: 12px;
-
-      thead {
-        th {
-          padding: 6px;
-        }
-      }
-
-      tbody {
-        tr {
-          td {
-            padding: 6px;
           }
         }
       }
@@ -155,6 +155,25 @@
           text-align: left;
         }
       }
+    }
+
+    /* Specific styles for title, date, explanation, and media columns */
+    td[data-label="Title"],
+    td[data-label="Date"],
+    td[data-label="Explanation"],
+    td[data-label="Media"] {
+      font-size: 14px; /* Increase font size */
+      padding: 12px; /* Increase padding */
+      font-weight: bold; /* Make text bold */
+      text-align: left; /* Align text to the left */
+    }
+
+    /* Alternate row background color for better readability */
+    tbody tr:nth-child(odd) {
+      background-color: #f0f0f0; /* Light gray */
+    }
+    tbody tr:nth-child(even) {
+      background-color: #e0e0e0; /* Slightly darker gray */
     }
   }
 }
