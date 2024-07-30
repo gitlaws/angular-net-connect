@@ -4,11 +4,18 @@ import { CardComponent } from '../card/card.component';
 import { RouterLink } from '@angular/router';
 import { AccordionComponent } from '../accordion/accordion.component';
 import { AccordionItem } from '../accordion/accordion-item.interface';
+import { CreditCardInputComponent } from '../credit-card-input/credit-card-input.component';
 
 @Component({
   selector: 'app-component-documentation',
   standalone: true,
-  imports: [CommonModule, CardComponent, RouterLink, AccordionComponent],
+  imports: [
+    CommonModule,
+    CardComponent,
+    RouterLink,
+    AccordionComponent,
+    CreditCardInputComponent,
+  ],
   templateUrl: './component-documentation.component.html',
   styleUrls: [
     './component-documentation.component.scss',

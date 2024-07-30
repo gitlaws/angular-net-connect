@@ -1,0 +1,26 @@
+<div class="credit-card-input-container">
+  <label for="creditCardNumber" class="credit-card-label"
+    >Credit Card Number</label
+  >
+  <div class="input-wrapper">
+    <div class="icon-container">
+      <ng-container [ngSwitch]="creditCardNumber[0]">
+        <i *ngSwitchCase="'3'" class="fab fa-cc-amex spaced-icon"></i>
+        <i *ngSwitchCase="'4'" class="fab fa-cc-visa spaced-icon"></i>
+        <i *ngSwitchCase="'5'" class="fab fa-cc-mastercard spaced-icon"></i>
+        <i *ngSwitchCase="'6'" class="fab fa-cc-discover spaced-icon"></i>
+        <i *ngSwitchDefault class="fas fa-credit-card spaced-icon"></i>
+      </ng-container>
+    </div>
+    <input
+      type="text"
+      id="creditCardNumber"
+      [(ngModel)]="creditCardNumber"
+      required
+      maxlength="16"
+      [readonly]="isReadonly"
+      placeholder="Enter your credit card number"
+      class="credit-card-input"
+    />
+  </div>
+</div>
