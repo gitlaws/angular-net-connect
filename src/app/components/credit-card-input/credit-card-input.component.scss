@@ -1,11 +1,4 @@
-:root {
-  --primary-color: #007bff;
-  --hover-color: #0056b3;
-  --background-color: #f9f9f9;
-  --focus-background-color: #e6f7ff;
-  --text-color: #444;
-  --error-color: #d9534f;
-}
+@import "../../../styles/colors.scss";
 
 .credit-card-input-container {
   display: flex;
@@ -22,7 +15,7 @@
   .credit-card-label {
     font-size: 1.2rem;
     font-weight: bold;
-    color: var(--text-color);
+    color: $text-color;
   }
 
   .input-wrapper {
@@ -32,11 +25,11 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 12px;
-    background-color: var(--background-color);
+    background-color: $background-color;
     transition: border-color 0.3s, box-shadow 0.3s;
 
     &:focus-within {
-      border-color: var(--primary-color);
+      border-color: $primary-color;
       box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
     }
 
@@ -48,13 +41,13 @@
 
     .spaced-icon {
       font-size: 2rem; /* Increased size for better visibility */
-      color: var(--primary-color); /* Consistent color scheme */
+      color: $primary-color; /* Consistent color scheme */
       padding: 4px; /* Padding around the icons */
       transition: transform 0.3s, color 0.3s; /* Smooth transition for hover effect */
 
       &:hover {
         transform: scale(1.1); /* Slightly enlarge the icon on hover */
-        color: var(--hover-color); /* Darker shade on hover */
+        color: $hover-color; /* Darker shade on hover */
       }
     }
 
@@ -68,7 +61,7 @@
       transition: background-color 0.3s;
 
       &:focus {
-        background-color: var(--focus-background-color);
+        background-color: $focus-background-color;
       }
 
       &::placeholder {
@@ -79,7 +72,7 @@
 
   .validation-message {
     font-size: 0.9rem;
-    color: var(--error-color);
+    color: $error-color;
   }
 
   //   @media (max-width: 600px) {
