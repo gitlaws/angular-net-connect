@@ -21,6 +21,47 @@
     [subTitle]="'Component'"
   >
     <app-credit-card-input body></app-credit-card-input>
+    <div footer>
+      <div class="credit-card-info">
+        <p>
+          Here's a general overview of the most common credit card networks and
+          the typical starting digits of their card numbers:
+        </p>
+        <p>
+          The first digit indicates the card network. The following digits
+          identify the specific issuer within that network. There is no standard
+          pattern or sequence for these subsequent digits.
+        </p>
+        <p>
+          First 4 digits: Issuer Identification Number (IIN) or Bank
+          Identification Number (BIN) Identifies the card network (Visa,
+          Mastercard, American Express, Discover, etc.)
+        </p>
+        <p>
+          The credit card number entered by the user calls the
+          AuthenticatorService used to identify and validate a specific card.
+        </p>
+        <p>
+          Note: While these are common starting digits, there are many
+          variations within each network. Credit card validation and
+          authorization is a multi-layered process involving several checks and
+          interactions with different security systems.
+        </p>
+      </div>
+
+      <div class="card-network-grid">
+        <div class="header">Card Network</div>
+        <div class="header">First 4 Digits</div>
+        <div>Visa</div>
+        <div>4xxx</div>
+        <div>Mastercard</div>
+        <div>5xxx</div>
+        <div>American Express</div>
+        <div>3xxx</div>
+        <div>Discover</div>
+        <div>6xxx</div>
+      </div>
+    </div>
   </app-card>
 
   <app-card

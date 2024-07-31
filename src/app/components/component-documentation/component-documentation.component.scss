@@ -3,3 +3,70 @@
   padding: 20px;
   max-width: 1280px;
 }
+
+div[footer] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .credit-card-info {
+    font-weight: bold;
+    max-width: 768px;
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #333;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.card-network-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .header {
+    font-weight: bold;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-bottom: 2px solid #ccc;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+  }
+
+  div {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+
+    &:nth-child(2n) {
+      border-left: 1px solid #ccc;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}
