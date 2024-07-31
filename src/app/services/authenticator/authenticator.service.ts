@@ -17,7 +17,7 @@ export class AuthenticatorService {
       return true; // Visa
     } else if (mii === '5' && /^[2-6]/.test(bin)) {
       return true; // Mastercard
-    } else if (mii === '6' && /^[2-6]/.test(bin)) {
+    } else if (mii === '6' && /^[0-6]/.test(bin)) {
       return true; // Discover
     }
 

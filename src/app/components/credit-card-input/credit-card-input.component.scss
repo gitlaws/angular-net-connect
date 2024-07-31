@@ -72,22 +72,20 @@
 
   .validation-message {
     font-size: 0.9rem;
-    color: $error-color;
     padding: 8px;
     border-radius: 4px;
-    background-color: lighten($error-color, 40%);
     text-align: center;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s;
 
     &.valid {
-      color: $primary-color;
-      background-color: lighten($primary-color, 10%);
+      color: #28a745; /* Green color for valid */
+      background-color: lighten(#28a745, 40%);
     }
 
     &.invalid {
-      color: $error-color;
-      background-color: lighten($error-color, 10%);
+      color: #d9534f; /* Red color for invalid */
+      background-color: lighten(#d9534f, 40%);
     }
   }
 

@@ -24,31 +24,37 @@
     />
   </div>
 
-  <div class="validation-message">
+  <div
+    class="validation-message"
+    [ngClass]="{ valid: isValidCard(), invalid: !isValidCard() }"
+  >
     Authentication: {{ isValidCard() ? "Valid" : "Invalid" }}
   </div>
 
   <div footer>
     Here's a general overview of the most common credit card networks and the
-    typical starting digits of their card numbers: First 4 digits: Issuer
-    Identification Number (IIN) or Bank Identification Number (BIN) Identifies
-    the card network (Visa, Mastercard, American Express, Discover, etc.) The
-    credit card number entered by the user calls the AuthenticatorService used
-    to identify and validate a specific card. Note: While these are common
-    starting digits, there are many variations within each network. Credit card
-    validation and authorization is a multi-layered process involving several
-    checks and interactions with different security systems.
+    typical starting digits of their card numbers: The first digit indicates the
+    card network. The following digits identify the specific issuer within that
+    network. There is no standard pattern or sequence for these subsequent
+    digits. First 4 digits: Issuer Identification Number (IIN) or Bank
+    Identification Number (BIN) Identifies the card network (Visa, Mastercard,
+    American Express, Discover, etc.) The credit card number entered by the user
+    calls the AuthenticatorService used to identify and validate a specific
+    card. Note: While these are common starting digits, there are many
+    variations within each network. Credit card validation and authorization is
+    a multi-layered process involving several checks and interactions with
+    different security systems.
     <div class="card-network-grid">
       <div class="header">Card Network</div>
       <div class="header">First 4 Digits</div>
       <div>Visa</div>
-      <div>4111</div>
+      <div>4xxx</div>
       <div>Mastercard</div>
-      <div>5123</div>
+      <div>5xxx</div>
       <div>American Express</div>
-      <div>3485</div>
+      <div>3xxx</div>
       <div>Discover</div>
-      <div>6011</div>
+      <div>6xxx</div>
     </div>
   </div>
 </div>
