@@ -1,0 +1,1 @@
+import{P as c,i as a}from"./chunk-4LLQ5T2T.js";var s=(()=>{let t=class t{constructor(){this.snackbar$=new a}callSnackbar(o){this.snackbar$.next(o)}};t.\u0275fac=function(n){return new(n||t)},t.\u0275prov=c({token:t,factory:t.\u0275fac,providedIn:"root"});let r=t;return r})();export{s as a};
