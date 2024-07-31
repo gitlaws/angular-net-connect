@@ -73,6 +73,22 @@
   .validation-message {
     font-size: 0.9rem;
     color: $error-color;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: lighten($error-color, 40%);
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+
+    &.valid {
+      color: $primary-color;
+      background-color: lighten($primary-color, 10%);
+    }
+
+    &.invalid {
+      color: $error-color;
+      background-color: lighten($error-color, 10%);
+    }
   }
 
   //   @media (max-width: 600px) {
@@ -89,4 +105,41 @@
   //       }
   //     }
   //   }
+}
+
+div[footer] {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+.card-network-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.card-network-grid .header {
+  font-weight: bold;
+  background-color: #e0e0e0;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-network-grid div {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-network-grid div:nth-child(2n) {
+  border-left: 1px solid #ccc;
+}
+
+.card-network-grid div:last-child {
+  border-bottom: none;
 }
