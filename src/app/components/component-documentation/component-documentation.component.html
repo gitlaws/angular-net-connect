@@ -27,29 +27,21 @@
         display additional information or actions. It is a flexible component
         that can be used in a variety of ways.
       </p>
-      <p>
-        The Bottom Sheet component is a reusable component that can be used to
-        display additional information or actions. It is a flexible component
-        that can be used in a variety of ways.
-      </p>
-      <p>
-        The Bottom Sheet component is a reusable component that can be used to
-        display additional information or actions. It is a flexible component
-        that can be used in a variety of ways.
-      </p>
     </div>
 
     <div footer>
-      <div class="bottom-sheet-container" [class.show]="isShown">
-        <ng-content></ng-content>
-      </div>
-
-      <div
-        class="bottom-sheet-overlay"
-        (click)="hide()"
-        [class.is-hidden]="!isShown"
-      ></div>
+      <button (click)="isShown = true">Show Bottom Sheet</button>
     </div>
+
+    <div class="bottom-sheet-container" [class.show]="isShown">
+      <ng-content></ng-content>
+    </div>
+
+    <div
+      class="bottom-sheet-overlay"
+      (click)="hide()"
+      [class.is-hidden]="!isShown"
+    ></div>
   </app-card>
 
   <app-card

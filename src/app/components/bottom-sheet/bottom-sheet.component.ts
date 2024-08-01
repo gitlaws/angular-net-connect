@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './bottom-sheet.component.html',
-  styleUrl: './bottom-sheet.component.scss',
+  styleUrls: ['./bottom-sheet.component.scss'],
 })
 export class BottomSheetComponent {
   public isShown = false;

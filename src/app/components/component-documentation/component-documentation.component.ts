@@ -30,9 +30,6 @@ import { BottomSheetComponent } from '../bottom-sheet/bottom-sheet.component';
   ],
 })
 export class ComponentDocumentationComponent {
-  hide() {
-    throw new Error('Method not implemented.');
-  }
   public loaderType = LoaderType.Loading;
   public accordionItems: AccordionItem[] = [
     {
@@ -49,5 +46,9 @@ export class ComponentDocumentationComponent {
     },
     // Add more items as needed
   ];
-  isShown: any;
+  isShown = false;
+
+  hide() {
+    this.isShown = false;
+  }
 }
