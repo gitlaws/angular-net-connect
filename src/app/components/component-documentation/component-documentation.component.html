@@ -23,9 +23,11 @@
   >
     <div body>
       <app-bottom-sheet #bottomSheet></app-bottom-sheet>
-      <button class="show-button" (click)="bottomSheet.showBottomSheet()">
-        Show Bottom Sheet
-      </button>
+      <div class="button-container">
+        <button class="show-button" (click)="bottomSheet.showBottomSheet()">
+          Show Bottom Sheet
+        </button>
+      </div>
     </div>
   </app-card>
 
