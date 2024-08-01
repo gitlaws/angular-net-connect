@@ -30,6 +30,7 @@ import { SkeletonLoaderComponent } from '../skeleton-loader/skeleton-loader.comp
   ],
 })
 export class ComponentDocumentationComponent {
+  public loaded = false;
   public loaderType = LoaderType.Loading;
   public accordionItems: AccordionItem[] = [
     {
@@ -47,5 +48,4 @@ export class ComponentDocumentationComponent {
     // Add more items as needed
   ];
   loaded: any;
-  dimensions: { [klass: string]: any } | null | undefined;
 }

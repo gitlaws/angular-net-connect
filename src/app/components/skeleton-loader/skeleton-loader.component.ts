@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './skeleton-loader.component.html',
-  styleUrl: './skeleton-loader.component.scss',
+  styleUrls: ['./skeleton-loader.component.scss'],
 })
 export class SkeletonLoaderComponent {
   @Input() public width = '100%';
