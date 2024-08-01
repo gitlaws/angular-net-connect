@@ -47,4 +47,5 @@ export class ComponentDocumentationComponent {
     // Add more items as needed
   ];
   loaded: any;
+  dimensions: { [klass: string]: any } | null | undefined;
 }

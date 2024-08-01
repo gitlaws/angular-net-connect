@@ -14,7 +14,11 @@
     [subTitle]="'Components'"
   >
     <div body>
-      <app-skeleton-loader *ngIf="!loaded"> </app-skeleton-loader>
+      <div *ngIf="!loaded" class="skeleton-wrapper">
+        <div class="skeleton-loader" [ngStyle]="dimensions"></div>
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text short"></div>
+      </div>
       <p *ngIf="loaded" class="enhanced-text">
         Skeleton Loader: A skeleton loader is a specific type of loader that
         mimics the layout of the content that will eventually load. It provides
