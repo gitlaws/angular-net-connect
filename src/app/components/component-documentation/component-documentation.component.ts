@@ -8,6 +8,7 @@ import { CreditCardInputComponent } from '../credit-card-input/credit-card-input
 import { SimpleTableComponent } from '../simple-table/simple-table.component';
 import { LoaderComponent } from '../loader/loader.component';
 import { LoaderType } from '../loader/models/loader-type.enum';
+import { BottomSheetComponent } from '../bottom-sheet/bottom-sheet.component';
 
 @Component({
   selector: 'app-component-documentation',
@@ -20,6 +21,7 @@ import { LoaderType } from '../loader/models/loader-type.enum';
     CreditCardInputComponent,
     SimpleTableComponent,
     LoaderComponent,
+    BottomSheetComponent,
   ],
   templateUrl: './component-documentation.component.html',
   styleUrls: [
@@ -28,6 +30,9 @@ import { LoaderType } from '../loader/models/loader-type.enum';
   ],
 })
 export class ComponentDocumentationComponent {
+  hide() {
+    throw new Error('Method not implemented.');
+  }
   public loaderType = LoaderType.Loading;
   public accordionItems: AccordionItem[] = [
     {
@@ -44,4 +49,5 @@ export class ComponentDocumentationComponent {
     },
     // Add more items as needed
   ];
+  isShown: any;
 }

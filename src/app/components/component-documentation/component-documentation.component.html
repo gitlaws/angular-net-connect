@@ -18,6 +18,42 @@
 
   <app-card
     [iconClasses]="'fas fa-info-circle'"
+    [title]="'Bottom Sheet'"
+    [subTitle]="'Component'"
+  >
+    <div body>
+      <p>
+        The Bottom Sheet component is a reusable component that can be used to
+        display additional information or actions. It is a flexible component
+        that can be used in a variety of ways.
+      </p>
+      <p>
+        The Bottom Sheet component is a reusable component that can be used to
+        display additional information or actions. It is a flexible component
+        that can be used in a variety of ways.
+      </p>
+      <p>
+        The Bottom Sheet component is a reusable component that can be used to
+        display additional information or actions. It is a flexible component
+        that can be used in a variety of ways.
+      </p>
+    </div>
+
+    <div footer>
+      <div class="bottom-sheet-container" [class.show]="isShown">
+        <ng-content></ng-content>
+      </div>
+
+      <div
+        class="bottom-sheet-overlay"
+        (click)="hide()"
+        [class.is-hidden]="!isShown"
+      ></div>
+    </div>
+  </app-card>
+
+  <app-card
+    [iconClasses]="'fas fa-info-circle'"
     [title]="'Credit Card Input'"
     [subTitle]="'Component'"
   >
@@ -67,16 +103,16 @@
 
   <app-card
     [iconClasses]="'fas fa-info-circle'"
-    [title]="'Empty'"
-    [subTitle]="'Component'"
-  >
-  </app-card>
-
-  <app-card
-    [iconClasses]="'fas fa-info-circle'"
     [title]="'Simple Sort Table'"
     [subTitle]="'Component'"
   >
     <app-simple-table body></app-simple-table>
+  </app-card>
+
+  <app-card
+    [iconClasses]="'fas fa-info-circle'"
+    [title]="'Empty'"
+    [subTitle]="'Component'"
+  >
   </app-card>
 </div>
