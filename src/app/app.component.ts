@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { ComponentDocumentationComponent } from './components/component-documentation/component-documentation.component';
 import { ToolbarComponent } from './core/toolbar/toolbar.component';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
+import { TopOfPageComponent } from './components/top-of-page/top-of-page.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { SnackbarComponent } from './components/snackbar/snackbar.component';
     ToolbarComponent,
     ComponentDocumentationComponent,
     SnackbarComponent,
+    TopOfPageComponent,
   ],
 })
 export class AppComponent {
