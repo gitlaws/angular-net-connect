@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-bottom-sheet',
@@ -8,13 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./bottom-sheet.component.scss'],
 })
 export class BottomSheetComponent {
-  public isShown = false;
+  @Input() isShown = false;
 
-  public show(): void {
-    this.isShown = true;
-  }
-
-  public hide(): void {
+  hide() {
     this.isShown = false;
   }
 }
