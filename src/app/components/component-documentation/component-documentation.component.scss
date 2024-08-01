@@ -100,3 +100,29 @@ div[footer] {
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
   }
 }
+
+.show-button {
+  background-color: #4caf50; /* Green background color */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for size */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+
+  &:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+
+  &:active {
+    background-color: #3e8e41; /* Even darker green on click */
+    transform: scale(0.95); /* Slightly shrink on click */
+  }
+
+  &:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5); /* Custom focus outline */
+  }
+}

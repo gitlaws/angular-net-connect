@@ -30,6 +30,8 @@ import { BottomSheetComponent } from '../bottom-sheet/bottom-sheet.component';
   ],
 })
 export class ComponentDocumentationComponent {
+  [x: string]: any; // Keep only one index signature
+
   public loaderType = LoaderType.Loading;
   public accordionItems: AccordionItem[] = [
     {
@@ -50,5 +52,11 @@ export class ComponentDocumentationComponent {
 
   hide() {
     this.isShown = false;
+  }
+
+  internalIsShown = false;
+
+  showBottomSheet() {
+    this.internalIsShown = true;
   }
 }

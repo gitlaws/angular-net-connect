@@ -22,28 +22,10 @@
     [subTitle]="'Component'"
   >
     <div body>
-      <app-bottom-sheet [isShown]="isShown">
-        <div class="bottom-sheet-content">
-          <!-- Placeholder content -->
-          <h2>Bottom Sheet Title</h2>
-          <p>This is some placeholder content inside the bottom sheet.</p>
-          <button (click)="isShown = false">Close</button>
-        </div>
-      </app-bottom-sheet>
-
-      <button (click)="isShown = true">Show Bottom Sheet</button>
-    </div>
-
-    <div footer>
-      <div class="bottom-sheet-container" [class.show]="isShown">
-        <ng-content></ng-content>
-      </div>
-
-      <div
-        class="bottom-sheet-overlay"
-        (click)="hide()"
-        [class.is-hidden]="!isShown"
-      ></div>
+      <app-bottom-sheet #bottomSheet></app-bottom-sheet>
+      <button class="show-button" (click)="bottomSheet.showBottomSheet()">
+        Show Bottom Sheet
+      </button>
     </div>
   </app-card>
 
