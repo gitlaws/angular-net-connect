@@ -1,4 +1,5 @@
 @import "../../../styles/_mixins.scss";
+@import "../../../styles.scss";
 
 .bottom-sheet-container {
   @include box-shadow();
@@ -120,6 +121,39 @@
   background-color: #f9f9f9;
   border: 1px dashed #ccc;
   border-radius: 5px;
+}
+
+.title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.places-list {
+  list-style: none;
+  padding: 0;
+}
+
+.place-item {
+  margin-bottom: 10px;
+}
+
+.place-link {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.place-link:hover {
+  text-decoration: underline;
+}
+
+.place-icon {
+  margin-right: 8px;
+  font-size: 1.5em;
+  color: #007bff;
 }
 
 .bottom-sheet-content {
