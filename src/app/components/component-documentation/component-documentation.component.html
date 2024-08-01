@@ -10,14 +10,6 @@
 
   <app-card
     [iconClasses]="'fas fa-info-circle'"
-    [title]="'Loader'"
-    [subTitle]="'Component'"
-  >
-    <app-loader body [isLoading]="false" [loaderType]="loaderType"></app-loader>
-  </app-card>
-
-  <app-card
-    [iconClasses]="'fas fa-info-circle'"
     [title]="'Skeleton Loader'"
     [subTitle]="'Components'"
   >
@@ -31,7 +23,17 @@
       </p>
     </div>
 
-    <button footer (click)="loaded = !loaded">Toggle</button>
+    <div class="button-wrapper" footer>
+      <button class="styled-button" (click)="loaded = !loaded">Toggle</button>
+    </div>
+  </app-card>
+
+  <app-card
+    [iconClasses]="'fas fa-info-circle'"
+    [title]="'Loader'"
+    [subTitle]="'Component'"
+  >
+    <app-loader body [isLoading]="false" [loaderType]="loaderType"></app-loader>
   </app-card>
 
   <app-card
