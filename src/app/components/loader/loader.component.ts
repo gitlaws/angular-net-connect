@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { LoaderType } from './models/loader-type.enum';
 import { CommonModule } from '@angular/common';
 
