@@ -8,7 +8,6 @@ import { CreditCardInputComponent } from '../credit-card-input/credit-card-input
 import { SimpleTableComponent } from '../simple-table/simple-table.component';
 import { LoaderComponent } from '../loader/loader.component';
 import { LoaderType } from '../loader/models/loader-type.enum';
-import { SkeletonLoaderComponent } from '../skeleton-loader/skeleton-loader.component';
 
 @Component({
   selector: 'app-component-documentation',
@@ -21,7 +20,6 @@ import { SkeletonLoaderComponent } from '../skeleton-loader/skeleton-loader.comp
     CreditCardInputComponent,
     SimpleTableComponent,
     LoaderComponent,
-    SkeletonLoaderComponent,
   ],
   templateUrl: './component-documentation.component.html',
   styleUrls: [
@@ -30,7 +28,6 @@ import { SkeletonLoaderComponent } from '../skeleton-loader/skeleton-loader.comp
   ],
 })
 export class ComponentDocumentationComponent {
-  public loaded = false;
   public loaderType = LoaderType.Loading;
   public accordionItems: AccordionItem[] = [
     {
@@ -47,5 +44,4 @@ export class ComponentDocumentationComponent {
     },
     // Add more items as needed
   ];
-  loaded: any;
 }
