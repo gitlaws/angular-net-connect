@@ -7,19 +7,23 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './loader.component.html',
-  styleUrl: './loader.component.scss',
+  styleUrls: ['./loader.component.scss'],
 })
 export class LoaderComponent {
   @Input() public isLoading = false;
   @Input() public loaderType: LoaderType = LoaderType.Circular;
   public LoaderType = LoaderType;
 
+  private loading = 'Loading';
+  private loadingPeriods = '.\0\0';
+
   public get loadingText(): string {
     return `${this.loading}${this.loadingPeriods}`;
   }
 
-  private loading = 'Loading';
-  private loadingPeriods = '.\0\0';
+  toggleLoader() {
+    this.isLoading = !this.isLoading;
+  }
 
   public ngOnInit(): void {
     if (this.loaderType === LoaderType.Loading) {

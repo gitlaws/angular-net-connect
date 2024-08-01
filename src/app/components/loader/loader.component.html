@@ -1,10 +1,19 @@
-<div class="loader-overlay" [style.display]="isLoading ? 'block' : 'none'">
+<div
+  class="loader-overlay"
+  [style.display]="isLoading ? 'block' : 'none'"
+  (click)="toggleLoader()"
+>
   <div class="loader-container">
-    <div class="loader">
+    <div class="loader" (click)="$event.stopPropagation()">
       <ng-container [ngSwitch]="loaderType">
         <h1 *ngSwitchCase="LoaderType.Loading">{{ loadingText }}</h1>
         <div class="circular" *ngSwitchCase="LoaderType.Circular"></div>
       </ng-container>
     </div>
   </div>
+</div>
+
+<!-- Button to toggle the loader overlay -->
+<div class="button-container">
+  <button (click)="toggleLoader()">Toggle Loader</button>
 </div>
