@@ -11,6 +11,7 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./core/home/home.component').then((m) => m.HomeComponent),
   },
+
   {
     path: 'components',
     loadComponent: () =>
