@@ -4,10 +4,14 @@
 $background-color: #ffffff;
 $text-color: #333333;
 $header-background-color: #f5f5f5;
-$row-accent-color: #fafafa;
+$row-accent-color: #f0f0f0; /* Lighter shade for even rows */
 $hover-background-color: #e0e0e0;
 $link-color: #007acc;
 $link-hover-color: #005f99;
+
+/* Font options */
+$header-font: "Arial", sans-serif; /* Sans-serif font for headers */
+$body-font: "Verdana", sans-serif; /* Sans-serif font for body text */
 
 /* Basic table styling */
 table {
@@ -19,19 +23,20 @@ table {
   background-color: $background-color;
   color: $text-color;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
-  font-family: "Arial", sans-serif; /* Clear and legible font */
+  font-family: $body-font; /* Clear and legible font */
+  border: 1px solid #ddd; /* Subtle border around the table */
 }
 
 th,
 td {
-  padding: 12px 15px;
+  padding: 15px 20px; /* Adjusted padding for better spacing */
   border: 1px solid #ddd; /* Light border color */
 }
 
 /* Header styling */
 th {
   background-color: $header-background-color;
-  cursor: default;
+  cursor: pointer; /* Change cursor to pointer for sortable columns */
   font-weight: bold;
   text-transform: uppercase;
   color: $text-color;
@@ -39,6 +44,12 @@ th {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle drop shadow */
   position: relative; /* For sorting icon positioning */
   padding-right: 20px; /* Add padding to the right for spacing */
+  font-family: $header-font; /* Font for headers */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+th:hover {
+  background-color: $hover-background-color; /* Hover effect for headers */
 }
 
 /* Row styling */
