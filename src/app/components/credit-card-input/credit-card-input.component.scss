@@ -43,11 +43,11 @@
       font-size: 2rem; /* Increased size for better visibility */
       color: $primary-color; /* Consistent color scheme */
       padding: 4px; /* Padding around the icons */
-      transition: transform 0.3s, color 0.3s; /* Smooth transition for hover effect */
+      transition: transform 0.3s, color 0.3s; 
 
       &:hover {
-        transform: scale(1.1); /* Slightly enlarge the icon on hover */
-        color: $hover-color; /* Darker shade on hover */
+        transform: scale(1.1); 
+        color: $hover-color;
       }
     }
 
