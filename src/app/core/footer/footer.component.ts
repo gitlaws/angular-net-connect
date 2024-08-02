@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss',
+  styleUrls: ['./footer.component.scss'],
 })
-export class FooterComponent {}
+export class FooterComponent {
+  openLink(event: MouseEvent, url: string): void {
+    event.preventDefault();
+    window.open(url, '_blank');
+  }
+}

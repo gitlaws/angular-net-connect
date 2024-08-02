@@ -1,5 +1,11 @@
 .footer {
-  background: linear-gradient(45deg, #3b5998, #8b9dc3);
+  background: linear-gradient(
+    45deg,
+    #ff00ff 0%,
+    #ff66ff 25%,
+    #66ffff 75%,
+    #00ffff 100%
+  );
   padding: 20px;
   text-align: center;
   position: fixed;
@@ -20,5 +26,25 @@
 
   &:hover {
     color: #dfe3ee;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    gap: 15px;
+  }
+
+  .footer-icon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    gap: 10px;
+  }
+
+  .footer-icon {
+    font-size: 16px;
   }
 }
