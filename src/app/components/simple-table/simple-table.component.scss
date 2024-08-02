@@ -63,11 +63,11 @@ th.no-sort::after {
 
 /* Row styling */
 tr:nth-child(even) {
-  background-color: $row-accent-color; /* Subtle accent for even rows */
+  // background-color: $row-accent-color; /* Subtle accent for even rows */
 }
 
 tr:hover {
-  background-color: $hover-background-color; /* Hover effect for rows */
+  // background-color: $hover-background-color; /* Hover effect for rows */
 }
 
 /* Custom class for table data cells */
