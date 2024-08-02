@@ -4,6 +4,7 @@ import { ComponentDocumentationComponent } from './components/component-document
 import { ToolbarComponent } from './core/toolbar/toolbar.component';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
 import { TopOfPageComponent } from './components/top-of-page/top-of-page.component';
+import { FooterComponent } from './core/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { TopOfPageComponent } from './components/top-of-page/top-of-page.compone
     ComponentDocumentationComponent,
     SnackbarComponent,
     TopOfPageComponent,
+    FooterComponent,
   ],
 })
 export class AppComponent {

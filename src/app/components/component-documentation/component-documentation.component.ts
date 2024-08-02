@@ -9,6 +9,7 @@ import { SimpleTableComponent } from '../simple-table/simple-table.component';
 import { LoaderComponent } from '../loader/loader.component';
 import { LoaderType } from '../loader/models/loader-type.enum';
 import { BottomSheetComponent } from '../bottom-sheet/bottom-sheet.component';
+import { FooterComponent } from '../../core/footer/footer.component';
 
 @Component({
   selector: 'app-component-documentation',
@@ -22,6 +23,7 @@ import { BottomSheetComponent } from '../bottom-sheet/bottom-sheet.component';
     SimpleTableComponent,
     LoaderComponent,
     BottomSheetComponent,
+    FooterComponent,
   ],
   templateUrl: './component-documentation.component.html',
   styleUrls: [
