@@ -1,16 +1,17 @@
 .footer {
   background: linear-gradient(
-    45deg,
-    #ff00ff 0%,
-    #ff66ff 25%,
-    #66ffff 75%,
-    #00ffff 100%
+    to bottom,
+    #d3d3d3 0%,
+    #c0c0c0 25%,
+    #a9a9a9 75%,
+    #808080 100%
   );
   padding: 20px;
   text-align: center;
   position: fixed;
   bottom: 0;
   width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
 }
 
 .footer-content {
