@@ -1,13 +1,15 @@
+<!-- simple-table.component.html -->
 <div class="sort-controls">
   <button (click)="sortData('title')">Sort by Title</button>
   <button (click)="sortData('date')">Sort by Date</button>
 </div>
-<table>
+<table aria-label="Simple Table">
   <thead>
     <tr>
       <th (click)="sortData('title')" class="sortable">Title</th>
       <th (click)="sortData('date')" class="sortable">Date</th>
-      <th>Explanation</th>
+      <th class="no-sort" aria-disabled="true">Explanation</th>
+      <!-- Disable sorting for this column -->
       <th>Media Type</th>
     </tr>
   </thead>

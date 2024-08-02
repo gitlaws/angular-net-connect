@@ -52,6 +52,15 @@ th:hover {
   background-color: $hover-background-color; /* Hover effect for headers */
 }
 
+/* Disable sorting for the 'Explanation' column */
+th.no-sort {
+  cursor: default;
+}
+
+th.no-sort::after {
+  display: none;
+}
+
 /* Row styling */
 tr:nth-child(even) {
   background-color: $row-accent-color; /* Subtle accent for even rows */
