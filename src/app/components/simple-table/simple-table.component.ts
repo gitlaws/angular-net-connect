@@ -4,8 +4,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 interface DataItem {
-  [key: string]: any; // Index signature to allow dynamic property access
-  // Define other specific properties if needed
+  title: string;
+  date: string;
+  explanation: string;
+  media_type: string;
+  url: string;
 }
 
 @Component({
@@ -18,9 +21,8 @@ interface DataItem {
 export class SimpleTableComponent implements OnInit {
   data: DataItem[] = [];
   filteredData: DataItem[] = [];
-  sortColumn: string = '';
+  sortColumn: keyof DataItem = 'title';
   sortDirection: 'asc' | 'desc' = 'asc';
-  searchQuery: string = '';
 
   constructor(private http: HttpClient) {}
 
@@ -38,7 +40,11 @@ export class SimpleTableComponent implements OnInit {
     });
   }
 
-  sortData(column: string): void {
+  sortData(column: keyof DataItem): void {
+    if (column === 'explanation') {
+      return; // Ignore sorting for the Explanation column
+    }
+
     if (this.sortColumn === column) {
       this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
     } else {
@@ -58,13 +64,5 @@ export class SimpleTableComponent implements OnInit {
         return 0;
       }
     });
-  }
-
-  filterData(): void {
-    this.filteredData = this.data.filter((item) =>
-      Object.values(item).some((value) =>
-        value.toString().toLowerCase().includes(this.searchQuery.toLowerCase())
-      )
-    );
   }
 }

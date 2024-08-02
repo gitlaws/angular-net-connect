@@ -1,34 +1,31 @@
-<div class="table-container">
-  <input
-    type="text"
-    placeholder="Search..."
-    (input)="filterData()"
-    aria-label="Search"
-  />
-
-  <table class="custom-table">
-    <thead>
-      <tr>
-        <th (click)="sortData('title')">Title</th>
-        <th (click)="sortData('date')">Date</th>
-        <th>Explanation</th>
-        <th>Media</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of filteredData">
-        <td>{{ item["title"] }}</td>
-        <td>{{ item["date"] }}</td>
-        <td>{{ item["explanation"] }}</td>
-        <td>
-          <ng-container *ngIf="item['media_type'] === 'image'">
-            <img [src]="item['url']" alt="{{ item['title'] }}" width="100" />
-          </ng-container>
-          <ng-container *ngIf="item['media_type'] === 'video'">
-            <a [href]="item['url']" target="_blank">Watch Video</a>
-          </ng-container>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="sort-controls">
+  <button (click)="sortData('title')">Sort by Title</button>
+  <button (click)="sortData('date')">Sort by Date</button>
 </div>
+<table>
+  <thead>
+    <tr>
+      <th (click)="sortData('title')" class="sortable">Title</th>
+      <th (click)="sortData('date')" class="sortable">Date</th>
+      <th>Explanation</th>
+      <th>Media Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of filteredData">
+      <td data-label="Title" class="table-data-cell">{{ item.title }}</td>
+      <td data-label="Date" class="table-data-cell">{{ item.date }}</td>
+      <td data-label="Explanation" class="table-data-cell">
+        {{ item.explanation }}
+      </td>
+      <td data-label="Media" class="media-container">
+        <ng-container *ngIf="item.media_type === 'image'">
+          <img [src]="item.url" alt="{{ item.title }}" />
+        </ng-container>
+        <ng-container *ngIf="item.media_type === 'video'">
+          <a [href]="item.url" target="_blank">Watch Video</a>
+        </ng-container>
+      </td>
+    </tr>
+  </tbody>
+</table>
