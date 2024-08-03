@@ -22,7 +22,7 @@
 
 .footer-icon {
   color: white;
-  font-size: 24px;
+  font-size: 28px; /* Increased base font size */
   transition: color 0.3s;
 
   &:hover {
@@ -32,20 +32,20 @@
 
 @media (max-width: 768px) {
   .footer-content {
-    gap: 15px;
+    gap: 20px; /* Adjusted gap for better spacing */
   }
 
   .footer-icon {
-    font-size: 20px;
+    font-size: 28px; /* Increased font size for tablets */
   }
 }
 
 @media (max-width: 480px) {
   .footer-content {
-    gap: 10px;
+    gap: 15px; /* Adjusted gap for better spacing */
   }
 
   .footer-icon {
-    font-size: 16px;
+    font-size: 28px; /* Increased font size for mobile */
   }
 }
