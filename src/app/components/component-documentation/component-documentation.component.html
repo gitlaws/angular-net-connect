@@ -39,26 +39,19 @@
     <app-credit-card-input body></app-credit-card-input>
     <div footer>
       <div class="credit-card-info">
-        <p class="title">Credit Card Input Component</p>
-        <p>This Angular component simplifies credit card data entry by:</p>
-        <ul>
-          <li>
-            Formatting: Automatically formats card numbers as they are typed.
-          </li>
-          <li>
-            Identifying: Recognizes the card network (Visa, Mastercard, etc.)
-            based on the initial digits.
-          </li>
-          <li>
-            Validating: Performs basic card number checks and communicates with
-            an authentication service for advanced validation.
-          </li>
-          <li>
-            User Interaction: Simply type the credit card number into the input
-            field. The component handles the rest, providing visual feedback and
-            error messages as needed.
-          </li>
-        </ul>
+        <p class="title">Credit Card Input Validator</p>
+        <p>
+          Identifies card types, and includes built-in validation to minimize
+          errors. Simply type the card number into the input field, and the
+          component will automatically format it and identify the card type.
+        </p>
+        <p>
+          Note: While these are common starting digits, there are many
+          variations within each network. Credit card validation and
+          authorization is a multi-layered process involving several checks and
+          interactions with different security systems.
+        </p>
+
         <div class="card-network-grid">
           <div class="header">Card Network</div>
           <div class="header">First 4 Digits</div>

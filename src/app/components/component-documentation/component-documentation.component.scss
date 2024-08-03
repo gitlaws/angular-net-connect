@@ -74,16 +74,6 @@
   line-height: 1.6;
   color: #555555;
 }
-.credit-card-info ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-.credit-card-info li {
-  margin-bottom: 10px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555555;
-}
 @media (max-width: 600px) {
   .credit-card-info {
     padding: 15px;
@@ -91,8 +81,7 @@
   .credit-card-info .title {
     font-size: 20px;
   }
-  .credit-card-info p,
-  .credit-card-info li {
+  .credit-card-info p {
     font-size: 14px;
   }
 }
