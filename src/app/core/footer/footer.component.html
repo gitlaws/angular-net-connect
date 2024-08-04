@@ -1,24 +1,29 @@
 <footer class="footer">
   <div class="footer-content">
     <a
-      href="https://www.linkedin.com"
-      target="_blank"
-      rel="noopener"
-      class="footer-icon"
-      aria-label="LinkedIn"
-      (click)="openLink($event, 'https://www.linkedin.com')"
-    >
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a
       href="https://github.com"
       target="_blank"
       rel="noopener"
       class="footer-icon"
       aria-label="GitHub"
-      (click)="openLink($event, 'https://github.com')"
+      (click)="openLink($event, 'https://github.com/gitlaws')"
     >
       <i class="fab fa-github"></i>
+    </a>
+    <a
+      href="https://www.linkedin.com"
+      target="_blank"
+      rel="noopener"
+      class="footer-icon"
+      aria-label="LinkedIn"
+      (click)="
+        openLink(
+          $event,
+          'https://www.linkedin.com/in/stanislaw-wasilewski-1bba55273/'
+        )
+      "
+    >
+      <i class="fab fa-linkedin"></i>
     </a>
     <a
       href="https://www.youtube.com"
@@ -26,19 +31,9 @@
       rel="noopener"
       class="footer-icon"
       aria-label="YouTube"
-      (click)="openLink($event, 'https://www.youtube.com')"
+      (click)="openLink($event, 'https://www.youtube.com/@sm.w/streams')"
     >
       <i class="fab fa-youtube"></i>
-    </a>
-    <a
-      href="https://www.facebook.com"
-      target="_blank"
-      rel="noopener"
-      class="footer-icon"
-      aria-label="Facebook"
-      (click)="openLink($event, 'https://www.facebook.com')"
-    >
-      <i class="fab fa-facebook"></i>
     </a>
     <a
       href="https://discord.com"
