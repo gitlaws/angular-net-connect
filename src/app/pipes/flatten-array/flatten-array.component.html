@@ -1,13 +1,8 @@
-<div class="flatten-array-container">
-  <h2>Flatten Array</h2>
-  <textarea
-    [(ngModel)]="nestedArray"
-    placeholder="Enter nested array"
-  ></textarea>
-  <button (click)="onFlatten()">Flatten</button>
-  <div *ngIf="flattenedArray.length">
-    <h3>Flattened Array:</h3>
-    <pre>{{ flattenedArray | json }}</pre>
-    <p *ngFor="let item of flattenedArray">{{ item }}</p>
-  </div>
+<div>
+  {{ flattenData | appFlatten }}
+</div>
+
+<div class="footer" footer>
+  <button (click)="modifyFlatten()">Modify</button>
+  <button (click)="reassignFlatten()">Reassign</button>
 </div>
