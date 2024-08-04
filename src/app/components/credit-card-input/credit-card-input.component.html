@@ -24,8 +24,18 @@
 
   <div
     class="validation-message"
-    [ngClass]="{ valid: isValidCard(), invalid: !isValidCard() }"
+    [ngClass]="{
+      valid: isValidCard(),
+      invalid: !isValidCard()
+    }"
   >
-    Authentication: {{ isValidCard() ? "Valid" : "Invalid" }}
+    <div class="network-validation-message">
+      Card Network: {{ isValidCard() ? "Valid" : "Invalid" }} ({{
+        getCardType()
+      }})
+    </div>
+    <div class="formatted-number-message">
+      Formatted Number: {{ creditCardNumber | creditCardFormatter }}
+    </div>
   </div>
 </div>
