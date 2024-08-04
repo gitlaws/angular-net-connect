@@ -28,8 +28,16 @@
 
   <app-card
     [iconClasses]="'fas fa-info-circle'"
-    [title]="'Async'"
+    [title]="'Flatten'"
     [subTitle]="'Pipe'"
   >
+    <div body>
+      {{ flattenData | flatten }}
+    </div>
+
+    <div class="footer" footer>
+      <button (click)="modifyFlatten()">Modify</button>
+      <button (click)="reassignFlatten()">Reassign</button>
+    </div>
   </app-card>
 </div>
