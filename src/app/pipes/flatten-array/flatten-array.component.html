@@ -1,0 +1,12 @@
+<div class="flatten-array-container">
+  <h2>Flatten Array</h2>
+  <textarea
+    [(ngModel)]="nestedArray"
+    placeholder="Enter nested array"
+  ></textarea>
+  <button (click)="onFlatten()">Flatten</button>
+  <div *ngIf="flattenedArray.length">
+    <h3>Flattened Array:</h3>
+    <pre>{{ flattenedArray | json }}</pre>
+  </div>
+</div>

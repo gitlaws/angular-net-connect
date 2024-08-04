@@ -32,12 +32,7 @@
     [subTitle]="'Pipe'"
   >
     <div body>
-      {{ flattenData | flatten }}
-    </div>
-
-    <div class="footer" footer>
-      <button (click)="modifyFlatten()">Modify</button>
-      <button (click)="reassignFlatten()">Reassign</button>
+      <app-flatten-array></app-flatten-array>
     </div>
   </app-card>
 </div>
