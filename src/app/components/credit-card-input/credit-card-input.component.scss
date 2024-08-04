@@ -43,10 +43,10 @@
       font-size: 2rem; /* Increased size for better visibility */
       color: $primary-color; /* Consistent color scheme */
       padding: 4px; /* Padding around the icons */
-      transition: transform 0.3s, color 0.3s; 
+      transition: transform 0.3s, color 0.3s;
 
       &:hover {
-        transform: scale(1.1); 
+        transform: scale(1.1);
         color: $hover-color;
       }
     }
@@ -87,6 +87,28 @@
       color: #d9534f; /* Red color for invalid */
       background-color: lighten(#d9534f, 40%);
     }
+  }
+
+  .network-validation-message,
+  .formatted-number-message {
+    font-size: 0.9rem;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 12px; /* Add spacing between the messages */
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .formatted-number-message {
+    font-size: 0.9rem;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    color: #333333; /* Text color */
+    background-color: #f1f1f1; /* Light grey background */
+    transition: background-color 0.3s, color 0.3s;
   }
 
   //   @media (max-width: 600px) {
