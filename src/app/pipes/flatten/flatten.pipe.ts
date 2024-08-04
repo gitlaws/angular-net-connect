@@ -11,7 +11,6 @@ export class FlattenPipe implements PipeTransform {
 
   private flattenArray(arr: any[]): any[] {
     const result: any[] = [];
-
     arr.forEach((value) => {
       if (Array.isArray(value)) {
         result.push(...this.flattenArray(value));
@@ -19,7 +18,6 @@ export class FlattenPipe implements PipeTransform {
         result.push(value);
       }
     });
-
     return result;
   }
 }

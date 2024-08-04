@@ -8,5 +8,6 @@
   <div *ngIf="flattenedArray.length">
     <h3>Flattened Array:</h3>
     <pre>{{ flattenedArray | json }}</pre>
+    <p *ngFor="let item of flattenedArray">{{ item }}</p>
   </div>
 </div>

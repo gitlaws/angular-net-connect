@@ -1,12 +1,12 @@
 import { Component, Inject } from '@angular/core';
 import { FlattenPipe } from '../flatten/flatten.pipe';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-flatten-array',
   standalone: true,
-  imports: [CommonModule, FormsModule, FlattenPipe], // Include FormsModule in imports
+  imports: [CommonModule, FormsModule, FlattenPipe],
   templateUrl: './flatten-array.component.html',
   styleUrls: ['./flatten-array.component.scss'],
 })
