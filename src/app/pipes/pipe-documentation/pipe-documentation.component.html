@@ -6,6 +6,17 @@
     [title]="'Credit Card Formatter'"
     [subTitle]="'Pipe'"
   >
+    <div body>
+      <p class="formatted-card-number">
+        {{ "1111222233334444" | creditCardFormatter }}
+      </p>
+      <p class="formatted-card-number">
+        {{ "111111111111111111111111111111" | creditCardFormatter }}
+      </p>
+      <p class="formatted-card-number invalid-card-number">
+        {{ "a111222233334444" | creditCardFormatter }}
+      </p>
+    </div>
   </app-card>
 
   <app-card

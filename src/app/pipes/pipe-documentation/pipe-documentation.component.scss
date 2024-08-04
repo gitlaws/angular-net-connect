@@ -15,3 +15,19 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+.formatted-card-number {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2em;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.invalid-card-number {
+  color: red;
+  text-decoration: line-through;
+}
