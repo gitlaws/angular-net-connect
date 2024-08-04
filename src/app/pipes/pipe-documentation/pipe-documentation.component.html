@@ -24,6 +24,36 @@
     [title]="'Custom Date Formatter'"
     [subTitle]="'Pipe'"
   >
+    <div body>
+      <p class="formatted-date">
+        {{
+          "2023-10-01T12:00:00Z"
+            | customDateFormatter
+              : "dd-MM-yyyy HH:mm:ss"
+              : "UTC"
+              : false
+              : "en-US"
+        }}
+      </p>
+      <p class="formatted-date">
+        {{
+          "2023-10-01T12:00:00Z"
+            | customDateFormatter : "dd MMMM yyyy" : "UTC" : false : "fr-FR"
+        }}
+      </p>
+      <p class="formatted-date">
+        {{
+          "2023-10-01T12:00:00Z"
+            | customDateFormatter : "dd MMMM yyyy" : "UTC" : false : "es-ES"
+        }}
+      </p>
+      <p class="formatted-date">
+        {{
+          "2023-10-01T12:00:00Z"
+            | customDateFormatter : "" : "" : true : "en-US"
+        }}
+      </p>
+    </div>
   </app-card>
 
   <app-card
