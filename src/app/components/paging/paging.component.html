@@ -1,0 +1,34 @@
+<ul>
+  <li>
+    <button
+      [disabled]="isPreviousDisabled"
+      (click)="setPage(this.currentPage - step)"
+      [attr.aria-label]="'Previous Page'"
+      title="Previous Page"
+    >
+      <i class="fas fa-chevron-left"></i>
+    </button>
+  </li>
+
+  <li *ngFor="let page of pages">
+    <button
+      (click)="setPage(page)"
+      [class.current-page]="currentPage === page"
+      [attr.aria-label]="'Page ' + page"
+      [attr.title]="'Page ' + page"
+    >
+      {{ page }}
+    </button>
+  </li>
+
+  <li>
+    <button
+      (click)="setPage(currentPage + step)"
+      [disabled]="isNextDisabled"
+      [attr.aria-label]="'Next Page'"
+      title="Next Page"
+    >
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </li>
+</ul>

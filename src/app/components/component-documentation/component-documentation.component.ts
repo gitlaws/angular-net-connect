@@ -13,6 +13,7 @@ import { FooterComponent } from '../../core/footer/footer.component';
 import { BannerComponent } from '../banner/banner.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
 import { InfiniteScrollComponent } from '../infinite-scroll/infinite-scroll.component';
+import { PagingComponent } from '../paging/paging.component';
 
 @Component({
   selector: 'app-component-documentation',
@@ -30,6 +31,7 @@ import { InfiniteScrollComponent } from '../infinite-scroll/infinite-scroll.comp
     BannerComponent,
     NotFoundComponent,
     InfiniteScrollComponent,
+    PagingComponent,
   ],
   templateUrl: './component-documentation.component.html',
   styleUrls: [
