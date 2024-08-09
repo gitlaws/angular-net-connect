@@ -13,10 +13,10 @@ $heading-font-family: "Roboto, sans-serif";
 .infinite-scroll-container {
   overflow: hidden;
   white-space: nowrap;
-  padding: 20px;
+  padding: 1.25rem;
   background-color: #e0f7fa; // Change background color
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   text-align: center;
   display: flex; // Use flexbox for layout
   flex-direction: column; // Ensure h2 is always on top
@@ -26,13 +26,13 @@ $heading-font-family: "Roboto, sans-serif";
     font-family: $heading-font-family; // Use new font family for heading
     font-size: 2.5rem; // Large font size
     color: $primary-color;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     text-align: center; // Center the text
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); // Subtle shadow
+    text-shadow: 0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.1); // Subtle shadow
 
-    padding: 10px 20px; // Add padding for better spacing
-    // border-radius: 5px; // Rounded corners
-    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Add box shadow for depth
+    padding: 0.625rem 1.25rem; // Add padding for better spacing
+    // border-radius: 0.3125rem; // Rounded corners
+    // box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); // Add box shadow for depth
     color: black; // Change text color to white for contrast
   }
 }
@@ -41,17 +41,18 @@ $heading-font-family: "Roboto, sans-serif";
   display: flex; // Use flexbox for layout
   animation: marquee 15s linear infinite;
   font-size: 2rem;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
   justify-content: flex-start; // Ensure icons start from the right
   width: 100%; // Ensure it takes full width
-  gap: 15px; // Use gap for spacing between icons
+  gap: 0.9375rem; // Use gap for spacing between icons
 
   i {
     display: inline-block;
     // color: $icon-color;
     transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Add shadow effect
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); // Add shadow effect
+    margin-right: 0.9375rem; // Adjust spacing between icons
 
     // Different icon sizes
     &.fa-html5 {
@@ -78,6 +79,10 @@ $heading-font-family: "Roboto, sans-serif";
       font-size: 3.7rem; // Very large icon size
       color: #68a063; // Node.js logo color
     }
+
+    &:last-child {
+      margin-right: 0; // Remove margin from the last icon
+    }
   }
 }
 
@@ -93,39 +98,61 @@ $heading-font-family: "Roboto, sans-serif";
 // Media queries for responsiveness
 @media (max-width: 768px) {
   .infinite-scroll-container {
-    padding: 15px;
+    padding: 1rem;
 
     h2 {
-      font-size: 1.25rem;
+      font-size: 1.75rem; // Adjust font size for medium screens
     }
   }
 
   .icon-container {
     font-size: 1.5rem;
-    flex-wrap: nowrap; // Allow wrapping of icons
-    gap: 10px; // Adjust gap for smaller screens
+    flex-wrap: wrap; // Allow wrapping of icons
+    gap: 0.625rem; // Adjust gap for smaller screens
 
     i {
-      margin-bottom: 10px; // Add margin bottom for wrapping
+      margin-bottom: 0.625rem; // Add margin bottom for wrapping
+      margin-right: 0.625rem; // Adjust spacing between icons
     }
   }
 }
 
 @media (max-width: 480px) {
   .infinite-scroll-container {
-    padding: 10px;
+    padding: 0.625rem;
 
     h2 {
-      font-size: 1rem;
+      font-size: 1.25rem; // Adjust font size for small screens
     }
   }
 
   .icon-container {
     font-size: 1.25rem;
-    gap: 5px; // Adjust gap for smaller screens
+    gap: 0.3125rem; // Adjust gap for smaller screens
 
     i {
-      margin-bottom: 5px; // Add margin bottom for wrapping
+      margin-bottom: 0.3125rem; // Add margin bottom for wrapping
+      margin-right: 0.3125rem; // Adjust spacing between icons
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .infinite-scroll-container {
+    padding: 0.3125rem;
+
+    h2 {
+      font-size: 1rem; // Adjust font size for very small screens
+    }
+  }
+
+  .icon-container {
+    font-size: 1rem;
+    gap: 0.125rem; // Adjust gap for very small screens
+
+    i {
+      margin-bottom: 0.125rem; // Add margin bottom for wrapping
+      margin-right: 0.125rem; // Adjust spacing between icons
     }
   }
 }
