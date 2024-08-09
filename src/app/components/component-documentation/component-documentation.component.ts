@@ -11,6 +11,7 @@ import { LoaderType } from '../loader/models/loader-type.enum';
 import { BottomSheetComponent } from '../bottom-sheet/bottom-sheet.component';
 import { FooterComponent } from '../../core/footer/footer.component';
 import { BannerComponent } from '../banner/banner.component';
+import { NotFoundComponent } from '../not-found/not-found.component';
 
 @Component({
   selector: 'app-component-documentation',
@@ -26,6 +27,7 @@ import { BannerComponent } from '../banner/banner.component';
     BottomSheetComponent,
     FooterComponent,
     BannerComponent,
+    NotFoundComponent,
   ],
   templateUrl: './component-documentation.component.html',
   styleUrls: [
