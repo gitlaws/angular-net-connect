@@ -41,6 +41,10 @@
 
 <div class="image-container">
   <div *ngFor="let image of images" class="image-item">
-    <img [src]="image.urls.small" [alt]="image.alt_description" />
+    <img
+      [src]="image.urls.small"
+      [alt]="image.alt_description || 'Image description not available'"
+      [title]="image.alt_description || 'Image description not available'"
+    />
   </div>
 </div>

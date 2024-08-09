@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "^18.1.0",
     "@angular/router": "^18.1.0",
     "@fortawesome/fontawesome-free": "^6.5.2",
+    "axios": "^1.7.3",
     "glob": "^10.4.2",
     "inflight": "^1.0.6",
     "rimraf": "^5.0.7",

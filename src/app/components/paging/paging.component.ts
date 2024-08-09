@@ -54,10 +54,16 @@ export class PagingComponent implements OnInit {
   }
 
   fetchImages(): void {
-    const apiUrl = `https://api.unsplash.com/photos?page=${this.currentPage}&per_page=${this.pageSize}&client_id=YOUR_ACCESS_KEY`;
-    this.http.get(apiUrl).subscribe((data: any) => {
-      this.images = data;
-      this.isLoading = false;
-    });
+    const apiUrl = `https://picsum.photos/v2/list?page=${this.currentPage}&limit=${this.pageSize}`;
+    this.http.get(apiUrl).subscribe(
+      (data: any) => {
+        this.images = data;
+        this.isLoading = false;
+      },
+      (error) => {
+        console.error('Error fetching images from Lorem Picsum:', error);
+        this.isLoading = false;
+      }
+    );
   }
 }
