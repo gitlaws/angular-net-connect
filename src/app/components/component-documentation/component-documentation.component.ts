@@ -14,6 +14,7 @@ import { BannerComponent } from '../banner/banner.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
 import { InfiniteScrollComponent } from '../infinite-scroll/infinite-scroll.component';
 import { PagingComponent } from '../paging/paging.component';
+import { FieldsetComponent } from '../fieldset/fieldset.component';
 
 @Component({
   selector: 'app-component-documentation',
@@ -32,6 +33,7 @@ import { PagingComponent } from '../paging/paging.component';
     NotFoundComponent,
     InfiniteScrollComponent,
     PagingComponent,
+    FieldsetComponent,
   ],
   templateUrl: './component-documentation.component.html',
   styleUrls: [

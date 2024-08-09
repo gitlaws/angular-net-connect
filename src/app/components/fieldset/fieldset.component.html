@@ -1,1 +1,29 @@
-<p>fieldset works!</p>
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <fieldset [formGroup]="formGroup">
+    <legend>{{ legend }}</legend>
+    <div *ngFor="let control of formControls">
+      <label [for]="control.name">{{ control.label || "Label" }}</label>
+      <input
+        [id]="control.name"
+        [type]="control.type || 'text'"
+        [formControlName]="control.name"
+        [title]="control.label || 'Enter ' + control.name"
+        [placeholder]="control.label || 'Enter ' + control.name"
+      />
+      <div
+        *ngIf="
+          formGroup.get(control.name)?.invalid &&
+          (formGroup.get(control.name)?.dirty ||
+            formGroup.get(control.name)?.touched)
+        "
+      >
+        <div
+          *ngFor="let error of formGroup.get(control.name)?.errors | keyvalue"
+        >
+          {{ error.key }}: {{ error.value }}
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <button type="submit" [disabled]="formGroup.invalid">Submit</button>
+</form>
