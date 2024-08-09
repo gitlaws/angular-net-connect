@@ -1,34 +1,46 @@
-<ul>
-  <li>
-    <button
-      [disabled]="isPreviousDisabled"
-      (click)="setPage(this.currentPage - step)"
-      [attr.aria-label]="'Previous Page'"
-      title="Previous Page"
-    >
-      <i class="fas fa-chevron-left"></i>
-    </button>
-  </li>
+<div
+  class="pagination-container"
+  role="navigation"
+  aria-label="Pagination Navigation"
+>
+  <button
+    class="pagination-button"
+    [disabled]="currentPage === 1 || isLoading"
+    (click)="previousPage()"
+    [attr.aria-label]="'Previous Page'"
+    tabindex="0"
+  >
+    &laquo;
+  </button>
 
-  <li *ngFor="let page of pages">
-    <button
-      (click)="setPage(page)"
-      [class.current-page]="currentPage === page"
-      [attr.aria-label]="'Page ' + page"
-      [attr.title]="'Page ' + page"
-    >
-      {{ page }}
-    </button>
-  </li>
+  <button
+    *ngFor="let page of pages"
+    class="pagination-button"
+    [class.current-page]="currentPage === page"
+    (click)="setPage(page)"
+    [attr.aria-label]="'Page ' + page"
+    [attr.aria-current]="currentPage === page ? 'page' : null"
+    [disabled]="isLoading"
+    tabindex="0"
+  >
+    {{ page }}
+  </button>
 
-  <li>
-    <button
-      (click)="setPage(currentPage + step)"
-      [disabled]="isNextDisabled"
-      [attr.aria-label]="'Next Page'"
-      title="Next Page"
-    >
-      <i class="fas fa-chevron-right"></i>
-    </button>
-  </li>
-</ul>
+  <button
+    class="pagination-button"
+    [disabled]="currentPage === totalPages || isLoading"
+    (click)="nextPage()"
+    [attr.aria-label]="'Next Page'"
+    tabindex="0"
+  >
+    &raquo;
+  </button>
+
+  <div *ngIf="isLoading" class="loading-indicator">Loading...</div>
+</div>
+
+<div class="image-container">
+  <div *ngFor="let image of images" class="image-item">
+    <img [src]="image.urls.small" [alt]="image.alt_description" />
+  </div>
+</div>
