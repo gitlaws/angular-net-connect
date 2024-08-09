@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class NotFoundComponent {
   private redirectCount = 10;
+  private intervalId: any;
+  private timerEnabled = false; // Flag to control the timer
 
   constructor(public router: Router) {}
 
@@ -22,12 +24,29 @@ export class NotFoundComponent {
   }
 
   public ngOnInit(): void {
-    setInterval(() => {
+    if (this.timerEnabled) {
+      this.startTimer();
+    }
+  }
+
+  private startTimer(): void {
+    this.intervalId = setInterval(() => {
       this.redirectCount--;
 
       if (this.redirectCount <= 0) {
+        clearInterval(this.intervalId);
         this.router.navigate(['']);
       }
     }, 1000);
+  }
+
+  public enableTimer(): void {
+    this.timerEnabled = true;
+    this.startTimer();
+  }
+
+  public redirectNow(): void {
+    clearInterval(this.intervalId);
+    this.router.navigate(['']);
   }
 }
