@@ -1,0 +1,74 @@
+@import "../../../styles/_mixins.scss";
+@import "../../../styles/_colors.scss";
+@import "../../../styles/_variables.scss";
+@import "../../../styles.scss";
+
+.infinite-scroll-container {
+  background-color: #e0f7fa;
+  color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; // Hide overflow to create a scrolling effect
+
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden; // Hide overflow to create a scrolling effect
+
+    i {
+      font-size: 36px;
+      color: #000000;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #1e90ff;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(
+        to right,
+        transparent,
+        #e0f7fa 50%,
+        transparent
+      );
+      animation: scroll 10s linear infinite;
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .icon-container {
+      flex-direction: column;
+    }
+  }
+}
