@@ -1,6 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import axios from 'axios';
+
+interface ImageItem {
+  id: string;
+  urls: {
+    small: string;
+  };
+  description: string;
+}
 
 @Component({
   selector: 'app-paging',
@@ -10,60 +18,47 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./paging.component.scss'],
 })
 export class PagingComponent implements OnInit {
-  @Input() pageSize: number = 10;
-  @Input() totalItems: number = 0;
-  @Input() currentPage: number = 1;
-  @Output() pageChange: EventEmitter<number> = new EventEmitter<number>();
-
-  isLoading = false;
-  images: any[] = [];
-
-  constructor(private http: HttpClient) {}
+  items: ImageItem[] = [];
+  currentPage: number = 1;
+  itemsPerPage: number = 5;
+  totalItems: number = 0;
 
   ngOnInit(): void {
-    this.fetchImages();
+    this.fetchData(this.currentPage);
+  }
+
+  async fetchData(page: number): Promise<void> {
+    const clientId = 'YOUR_UNSPLASH_ACCESS_KEY';
+    const apiUrl = `https://api.unsplash.com/photos?page=${page}&per_page=${this.itemsPerPage}&client_id=${clientId}`;
+
+    try {
+      const response = await axios.get(apiUrl);
+      this.items = response.data;
+      this.totalItems = parseInt(response.headers['x-total']);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
   }
 
   get totalPages(): number {
-    return Math.ceil(this.totalItems / this.pageSize);
+    return Math.ceil(this.totalItems / this.itemsPerPage);
   }
 
-  get pages(): number[] {
-    return Array.from({ length: this.totalPages }, (_, i) => i + 1);
+  goToPage(page: number): void {
+    if (page < 1 || page > this.totalPages) return;
+    this.currentPage = page;
+    this.fetchData(page);
   }
 
-  setPage(page: number): void {
-    if (page >= 1 && page <= this.totalPages && this.currentPage !== page) {
-      this.isLoading = true;
-      this.currentPage = page;
-      this.pageChange.emit(this.currentPage);
-      this.fetchImages();
+  nextPage(): void {
+    if (this.currentPage < this.totalPages) {
+      this.goToPage(this.currentPage + 1);
     }
   }
 
   previousPage(): void {
     if (this.currentPage > 1) {
-      this.setPage(this.currentPage - 1);
+      this.goToPage(this.currentPage - 1);
     }
-  }
-
-  nextPage(): void {
-    if (this.currentPage < this.totalPages) {
-      this.setPage(this.currentPage + 1);
-    }
-  }
-
-  fetchImages(): void {
-    const apiUrl = `https://picsum.photos/v2/list?page=${this.currentPage}&limit=${this.pageSize}`;
-    this.http.get(apiUrl).subscribe(
-      (data: any) => {
-        this.images = data;
-        this.isLoading = false;
-      },
-      (error) => {
-        console.error('Error fetching images from Lorem Picsum:', error);
-        this.isLoading = false;
-      }
-    );
   }
 }
