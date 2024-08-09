@@ -2,12 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 
-interface ImageItem {
+interface TextItem {
   id: string;
-  urls: {
-    small: string;
-  };
-  description: string;
+  title: string;
+  body: string;
 }
 
 @Component({
@@ -18,7 +16,7 @@ interface ImageItem {
   styleUrls: ['./paging.component.scss'],
 })
 export class PagingComponent implements OnInit {
-  items: ImageItem[] = [];
+  items: TextItem[] = [];
   currentPage: number = 1;
   itemsPerPage: number = 5;
   totalItems: number = 0;
@@ -28,16 +26,16 @@ export class PagingComponent implements OnInit {
   }
 
   async fetchData(page: number): Promise<void> {
-    const apiUrl = `https://picsum.photos/v2/list?page=${page}&limit=${this.itemsPerPage}`;
+    const apiUrl = `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${this.itemsPerPage}`;
 
     try {
       const response = await axios.get(apiUrl);
       this.items = response.data.map((item: any) => ({
         id: item.id,
-        urls: { small: item.download_url },
-        description: item.author,
+        title: item.title,
+        body: item.body,
       }));
-      this.totalItems = parseInt(response.headers['x-total'], 10);
+      this.totalItems = parseInt(response.headers['x-total-count'], 10);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
