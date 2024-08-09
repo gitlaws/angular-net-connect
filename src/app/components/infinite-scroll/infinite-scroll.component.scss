@@ -8,7 +8,7 @@
 $background-color: #f9f9f9;
 $primary-color: #333;
 $icon-color: #555;
-$font-family: "Arial, Helvetica, sans-serif";
+$heading-font-family: "Roboto, sans-serif";
 
 .infinite-scroll-container {
   overflow: hidden;
@@ -23,58 +23,59 @@ $font-family: "Arial, Helvetica, sans-serif";
   align-items: center;
 
   h2 {
-    font-family: $font-family;
-    font-size: 1.5rem;
+    font-family: $heading-font-family; // Use new font family for heading
+    font-size: 2.5rem; // Large font size
     color: $primary-color;
     margin-bottom: 20px;
+    text-align: center; // Center the text
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); // Subtle shadow
+
+    padding: 10px 20px; // Add padding for better spacing
+    // border-radius: 5px; // Rounded corners
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Add box shadow for depth
+    color: black; // Change text color to white for contrast
   }
 }
 
 .icon-container {
   display: flex; // Use flexbox for layout
-  animation: marquee 5s linear infinite;
+  animation: marquee 15s linear infinite;
   font-size: 2rem;
   padding: 10px;
   border-radius: 5px;
   justify-content: flex-start; // Ensure icons start from the right
   width: 100%; // Ensure it takes full width
+  gap: 15px; // Use gap for spacing between icons
 
   i {
     display: inline-block;
-    margin-right: 15px; // Adjusted spacing between icons
     // color: $icon-color;
     transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Add shadow effect
 
-    &:hover {
-      transform: scale(1.2);
-      color: $primary-color;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Enhance shadow on hover
-    }
-
     // Different icon sizes
     &.fa-html5 {
-      font-size: 2.5rem;
+      font-size: 4rem; // Very large icon size
       color: #e34f26; // HTML5 logo color
     }
 
     &.fa-css3-alt {
-      font-size: 2.3rem;
+      font-size: 3.8rem; // Very large icon size
       color: #1572b6; // CSS3 logo color
     }
 
     &.fa-js {
-      font-size: 2.2rem;
+      font-size: 3.6rem; // Very large icon size
       color: #f7df1e; // JavaScript logo color
     }
 
     &.fa-angular {
-      font-size: 2.4rem;
+      font-size: 3.9rem; // Very large icon size
       color: #dd1b16; // Angular logo color
     }
 
     &.fa-node-js {
-      font-size: 2.1rem;
+      font-size: 3.7rem; // Very large icon size
       color: #68a063; // Node.js logo color
     }
   }
@@ -101,10 +102,10 @@ $font-family: "Arial, Helvetica, sans-serif";
 
   .icon-container {
     font-size: 1.5rem;
-    flex-wrap: wrap; // Allow wrapping of icons
+    flex-wrap: nowrap; // Allow wrapping of icons
+    gap: 10px; // Adjust gap for smaller screens
 
     i {
-      margin-right: 10px;
       margin-bottom: 10px; // Add margin bottom for wrapping
     }
   }
@@ -121,9 +122,9 @@ $font-family: "Arial, Helvetica, sans-serif";
 
   .icon-container {
     font-size: 1.25rem;
+    gap: 5px; // Adjust gap for smaller screens
 
     i {
-      margin-right: 5px;
       margin-bottom: 5px; // Add margin bottom for wrapping
     }
   }
