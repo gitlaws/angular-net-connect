@@ -3,72 +3,128 @@
 @import "../../../styles/_variables.scss";
 @import "../../../styles.scss";
 
+// _variables.scss
+
+$background-color: #f9f9f9;
+$primary-color: #333;
+$icon-color: #555;
+$font-family: "Arial, Helvetica, sans-serif";
+
 .infinite-scroll-container {
-  background-color: #e0f7fa;
-  color: #000000;
+  overflow: hidden;
+  white-space: nowrap;
   padding: 20px;
+  background-color: #e0f7fa; // Change background color
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
+  text-align: center;
+  display: flex; // Use flexbox for layout
+  flex-direction: column; // Ensure h2 is always on top
   align-items: center;
-  overflow: hidden; // Hide overflow to create a scrolling effect
 
   h2 {
-    font-size: 32px;
-    font-weight: bold;
+    font-family: $font-family;
+    font-size: 1.5rem;
+    color: $primary-color;
     margin-bottom: 20px;
-    text-align: center;
+  }
+}
+
+.icon-container {
+  display: flex; // Use flexbox for layout
+  animation: marquee 5s linear infinite;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 5px;
+  justify-content: flex-start; // Ensure icons start from the right
+  width: 100%; // Ensure it takes full width
+
+  i {
+    display: inline-block;
+    margin-right: 15px; // Adjusted spacing between icons
+    // color: $icon-color;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Add shadow effect
+
+    &:hover {
+      transform: scale(1.2);
+      color: $primary-color;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Enhance shadow on hover
+    }
+
+    // Different icon sizes
+    &.fa-html5 {
+      font-size: 2.5rem;
+      color: #e34f26; // HTML5 logo color
+    }
+
+    &.fa-css3-alt {
+      font-size: 2.3rem;
+      color: #1572b6; // CSS3 logo color
+    }
+
+    &.fa-js {
+      font-size: 2.2rem;
+      color: #f7df1e; // JavaScript logo color
+    }
+
+    &.fa-angular {
+      font-size: 2.4rem;
+      color: #dd1b16; // Angular logo color
+    }
+
+    &.fa-node-js {
+      font-size: 2.1rem;
+      color: #68a063; // Node.js logo color
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+// Media queries for responsiveness
+@media (max-width: 768px) {
+  .infinite-scroll-container {
+    padding: 15px;
+
+    h2 {
+      font-size: 1.25rem;
+    }
   }
 
   .icon-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    overflow: hidden; // Hide overflow to create a scrolling effect
+    font-size: 1.5rem;
+    flex-wrap: wrap; // Allow wrapping of icons
 
     i {
-      font-size: 36px;
-      color: #000000;
-      transition: color 0.3s;
-
-      &:hover {
-        color: #1e90ff;
-      }
+      margin-right: 10px;
+      margin-bottom: 10px; // Add margin bottom for wrapping
     }
+  }
+}
 
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: linear-gradient(
-        to right,
-        transparent,
-        #e0f7fa 50%,
-        transparent
-      );
-      animation: scroll 10s linear infinite;
+@media (max-width: 480px) {
+  .infinite-scroll-container {
+    padding: 10px;
+
+    h2 {
+      font-size: 1rem;
     }
   }
 
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
+  .icon-container {
+    font-size: 1.25rem;
 
-  @media (max-width: 768px) {
-    .icon-container {
-      flex-direction: column;
+    i {
+      margin-right: 5px;
+      margin-bottom: 5px; // Add margin bottom for wrapping
     }
   }
 }
