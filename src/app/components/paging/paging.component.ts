@@ -28,13 +28,16 @@ export class PagingComponent implements OnInit {
   }
 
   async fetchData(page: number): Promise<void> {
-    const clientId = 'YOUR_UNSPLASH_ACCESS_KEY';
-    const apiUrl = `https://api.unsplash.com/photos?page=${page}&per_page=${this.itemsPerPage}&client_id=${clientId}`;
+    const apiUrl = `https://picsum.photos/v2/list?page=${page}&limit=${this.itemsPerPage}`;
 
     try {
       const response = await axios.get(apiUrl);
-      this.items = response.data;
-      this.totalItems = parseInt(response.headers['x-total']);
+      this.items = response.data.map((item: any) => ({
+        id: item.id,
+        urls: { small: item.download_url },
+        description: item.author,
+      }));
+      this.totalItems = parseInt(response.headers['x-total'], 10);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
