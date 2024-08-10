@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
 @Component({
   selector: 'app-password',
   standalone: true,
-  imports: [CommonModule, FormsModule], // Add FormsModule to imports array
+  imports: [CommonModule, FormsModule],
   templateUrl: './password.component.html',
   styleUrls: ['./password.component.scss'],
 })
