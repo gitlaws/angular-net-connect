@@ -15,6 +15,7 @@ import { NotFoundComponent } from '../not-found/not-found.component';
 import { InfiniteScrollComponent } from '../infinite-scroll/infinite-scroll.component';
 import { PagingComponent } from '../paging/paging.component';
 import { FieldsetComponent } from '../fieldset/fieldset.component';
+import { PasswordComponent } from '../password/password.component';
 
 @Component({
   selector: 'app-component-documentation',
@@ -34,6 +35,7 @@ import { FieldsetComponent } from '../fieldset/fieldset.component';
     InfiniteScrollComponent,
     PagingComponent,
     FieldsetComponent,
+    PasswordComponent,
   ],
   templateUrl: './component-documentation.component.html',
   styleUrls: [
