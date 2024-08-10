@@ -1,88 +1,24 @@
+/* Design System */
+$primary-color: #007bff;
+$secondary-color: #0056b3;
+$background-color: #f9f9f9;
+$border-color: #ddd;
+$text-color: #333;
+$label-color: #555;
+$error-color: #d9534f;
+$font-family-heading: "Roboto", sans-serif;
+$font-family-body: "Merriweather", serif;
+
+/* Personal Info Styles */
 form {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: $background-color;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-  fieldset {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 20px;
-    margin-bottom: 20px;
-
-    legend {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #333;
-    }
-
-    div {
-      margin-bottom: 15px;
-
-      label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: 600;
-        color: #555;
-      }
-
-      input {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 1em;
-        transition: border-color 0.3s;
-
-        &:focus {
-          border-color: #007bff;
-          outline: none;
-        }
-      }
-
-      div {
-        margin-top: 5px;
-        color: #d9534f;
-        font-size: 0.9em;
-      }
-    }
-  }
-
-  button[type="submit"] {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1em;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-
-    &:hover {
-      background-color: #0056b3;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    &:disabled {
-      background-color: #ccc;
-      cursor: not-allowed;
-    }
-  }
-}
-
-/* Styles for the specific form */
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-family: "Arial", sans-serif;
+  font-family: $font-family-body;
+  line-height: 1.6;
 
   @media (max-width: 768px) {
     padding: 15px;
@@ -93,67 +29,104 @@ form {
   }
 
   fieldset {
-    border: 1px solid #ddd;
+    border: 1px solid $border-color;
     border-radius: 4px;
     padding: 20px;
     margin-bottom: 20px;
     background-color: #ffffff;
 
     legend {
-      font-size: 1.2em;
+      font-size: 1.75em;
       font-weight: bold;
-      color: #333;
+      color: $text-color;
       margin-bottom: 10px;
+      font-family: $font-family-heading;
     }
 
-    .checkbox-container {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
+    .question {
+      margin-bottom: 20px;
 
-      input[type="checkbox"] {
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        position: relative;
-        cursor: pointer;
-        transition: background-color 0.3s, border-color 0.3s;
-        margin-right: 15px; /* Adjusted margin for spacing */
-
-        &:checked {
-          background-color: #007bff;
-          border-color: #007bff;
-        }
-
-        &:checked::after {
-          content: "";
-          position: absolute;
-          top: 2px;
-          left: 6px;
-          width: 6px;
-          height: 12px;
-          border: solid white;
-          border-width: 0 2px 2px 0;
-          transform: rotate(45deg);
-        }
-
-        &:focus {
-          outline: none;
-          box-shadow: 0 0 3px 2px rgba(0, 123, 255, 0.5);
-        }
-
-        &:hover {
-          border-color: #007bff;
-        }
+      p {
+        padding-left: 10px; /* Indent paragraph text */
       }
 
-      label {
-        font-size: 1em;
-        color: #555;
-        transition: color 0.3s;
+      .checkbox-container {
+        margin-top: 10px; /* Increase top margin */
+
+        &:last-child {
+          margin-bottom: 15px; /* Add bottom margin to the last checkbox container */
+        }
+
+        display: flex;
+        align-items: center;
+
+        input[type="checkbox"] {
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          border: 2px solid $border-color;
+          border-radius: 4px;
+          position: relative;
+          cursor: pointer;
+          transition: background-color 0.3s, border-color 0.3s;
+          margin-right: 15px;
+
+          &:checked {
+            background-color: $primary-color;
+            border-color: $primary-color;
+          }
+
+          &:checked::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 6px;
+            width: 6px;
+            height: 12px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+          }
+
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 3px 2px rgba(0, 123, 255, 0.5);
+          }
+
+          &:hover {
+            border-color: $primary-color;
+          }
+        }
+
+        label {
+          font-size: 1em;
+          color: $label-color;
+          transition: color 0.3s;
+        }
       }
+    }
+  }
+
+  button[type="submit"] {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      background-color: $secondary-color;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
     }
   }
 }

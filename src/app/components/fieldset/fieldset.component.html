@@ -1,3 +1,5 @@
+<!-- Personal Info -->
+
 <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <fieldset [formGroup]="formGroup">
     <legend>{{ legend }}</legend>
@@ -28,12 +30,65 @@
   <button type="submit" [disabled]="formGroup.invalid">Submit</button>
 </form>
 
+<!-- Checkbox -->
 <form action="#">
   <fieldset>
     <legend>Checkbox</legend>
-    <div class="checkbox-container">
-      <input type="checkbox" id="chbx" name="agree" value="Yes!" />
-      <label for="chbx">I agree</label>
+
+    <div class="question">
+      <p>I prefer a work environment where I can:</p>
+      <div class="checkbox-container">
+        <input
+          type="checkbox"
+          name="work_environment"
+          value="independent"
+          id="independent"
+        />
+        <label for="independent"
+          >Work independently with minimal supervision.</label
+        >
+      </div>
+      <div class="checkbox-container">
+        <input
+          type="checkbox"
+          name="work_environment"
+          value="collaborative"
+          id="collaborative"
+        />
+        <label for="collaborative">Collaborate closely with a team.</label>
+      </div>
+      <div class="checkbox-container">
+        <input
+          type="checkbox"
+          name="work_environment"
+          value="balanced"
+          id="balanced"
+        />
+        <label for="balanced"
+          >Have a balance of both independent and team work.</label
+        >
+      </div>
+    </div>
+
+    <div class="question">
+      <p>In terms of company culture, I appreciate:</p>
+      <div class="checkbox-container">
+        <input type="checkbox" name="culture" value="relaxed" id="relaxed" />
+        <label for="relaxed">A relaxed, casual environment.</label>
+      </div>
+      <div class="checkbox-container">
+        <input
+          type="checkbox"
+          name="culture"
+          value="professional"
+          id="professional"
+        />
+        <label for="professional">A focused, professional atmosphere.</label>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" name="culture" value="dynamic" id="dynamic" />
+        <label for="dynamic">A dynamic mix of both.</label>
+      </div>
     </div>
   </fieldset>
 </form>
