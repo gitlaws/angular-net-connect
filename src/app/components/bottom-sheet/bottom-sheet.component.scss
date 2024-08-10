@@ -1,6 +1,52 @@
 @import "../../../styles/_mixins.scss";
 @import "../../../styles.scss";
 
+/* Bottom Sheet Component */
+.styled-paragraph-bottom-sheet {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  line-height: 1.8; /* Adjusted line height for better readability */
+  color: #666; /* Light gray text */
+  border: 1px solid #ddd; /* Light border */
+  text-indent: 20px; /* Slight indent */
+  margin: 20px 0; /* Consistent vertical spacing */
+}
+
+.styled-paragraph-bottom-sheet:focus {
+  outline: 2px solid #005fcc;
+}
+
+.styled-paragraph-bottom-sheet {
+  font-size: 1.1em;
+}
+
+/* Bottom-Sheet Highlight key terms */
+.styled-paragraph-bottom-sheet .highlight {
+  font-weight: bold; /* Bold font weight */
+  color: #333; /* Darker color for emphasis */
+}
+
+/* Bottom-Sheet Responsive design */
+@media (max-width: 768px) {
+  .styled-paragraph-bottom-sheet {
+    font-size: 1em; /* Adjust font size for tablets */
+    padding: 10px; /* Adjust padding for tablets */
+    text-indent: 15px; /* Adjust indent for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .styled-paragraph-bottom-sheet {
+    font-size: 0.9em; /* Adjust font size for mobile */
+    padding: 8px; /* Adjust padding for mobile */
+    text-indent: 10px; /* Adjust indent for mobile */
+    margin: 15px 0; /* Adjust vertical spacing for mobile */
+  }
+}
+
+/* Bottom Sheet Button */
 .bottom-sheet-container {
   @include box-shadow();
   background-color: white;
