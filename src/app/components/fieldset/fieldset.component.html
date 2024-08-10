@@ -4,8 +4,11 @@
   <fieldset [formGroup]="formGroup">
     <legend>{{ legend }}</legend>
     <div *ngFor="let control of formControls">
-      <label [for]="control.name">{{ control.label || "Label" }}</label>
+      <label class="fieldset-form-label" [for]="control.name">{{
+        control.label || "Label"
+      }}</label>
       <input
+        class="fieldset-form-input"
         [id]="control.name"
         [type]="control.type || 'text'"
         [formControlName]="control.name"

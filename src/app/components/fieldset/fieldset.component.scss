@@ -130,3 +130,38 @@ form {
     }
   }
 }
+
+.fieldset-form-label {
+  font-weight: bold;
+  color: #333;
+  margin: 15px 0 15px 0; /* Increased vertical spacing */
+}
+
+.fieldset-form-input {
+  margin: 15px 0 15px 10px; /* Reduced left margin for closer alignment */
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .fieldset-form-label {
+    margin: 10px 0 10px 0; /* Adjusted margins for smaller screens */
+  }
+
+  .fieldset-form-input {
+    margin: 10px 0 10px 5px; /* Adjusted margins for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .fieldset-form-label {
+    margin: 5px 0 5px 0; /* Further adjusted margins for very small screens */
+  }
+
+  .fieldset-form-input {
+    margin: 5px 0 5px 2px; /* Further adjusted margins for very small screens */
+  }
+}
