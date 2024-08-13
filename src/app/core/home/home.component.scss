@@ -4,40 +4,35 @@
 
 .intro-section {
   position: relative;
-  text-align: center;
-  padding: 150px 0;
-  margin-top: 100px;
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .background-image {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  width: 50%;
   object-fit: cover;
   z-index: 1;
+  filter: brightness(50%); /* Darken the image for better text contrast */
+  transform: translate(-50%, -50%); /* Center the image */
 }
 
 .intro-content {
   position: relative;
-  z-index: 1;
-  // max-width: 800px;
-  margin: 0 auto;
-  // height: 500px;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff; /* White text for contrast */
 }
 
 .intro-headline {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  // background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
-  // background: linear-gradient(to right, #ff2079 0%, #4a00e0 100%);
-  // background: linear-gradient(to right, #ff00c8 0%, #333399 100%);
-  // background: linear-gradient(to right, #ff0000 0%, #0000ff 100%);
-  // background: linear-gradient(to right, #00ff00 0%, #ff00ff 100%);
+  font-size: 3rem;
+  margin-bottom: 10px;
   background: linear-gradient(to right, #ff00ff 0%, #00ffff 100%);
 
   -webkit-background-clip: text;
@@ -46,9 +41,8 @@
 }
 
 .intro-description {
-  font-size: 1.2em;
-  margin-bottom: 40px;
-  color: white;
+  font-size: 1.5rem;
+  color: black;
 }
 
 /* Define the styles for the content section */
