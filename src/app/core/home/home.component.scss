@@ -50,3 +50,45 @@
   margin-bottom: 40px;
   color: white;
 }
+
+/* Define the styles for the content section */
+.content-section {
+  background-color: #f0f0f0; /* Light gray background */
+  font-family: "Arial", sans-serif; /* Sans-serif font family */
+  padding: 20px;
+  margin: 20px;
+  margin-bottom: 10rem;
+  border-radius: 8px;
+}
+
+/* Style the section title */
+.section-title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style the subsection titles */
+.subsection-title {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Style the subsection descriptions */
+.subsection-description {
+  margin-bottom: 10px;
+}
+
+/* Style the lists */
+.subsection-list {
+  color: #666666; /* Subtle gray color for bullet points */
+  margin-left: 20px;
+}
+
+/* Ensure the content is responsive */
+@media (max-width: 768px) {
+  .content-section {
+    padding: 10px;
+    margin: 10px;
+  }
+}
