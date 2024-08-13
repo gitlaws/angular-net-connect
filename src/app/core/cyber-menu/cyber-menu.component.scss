@@ -15,6 +15,7 @@
   font-size: 1.2em;
   padding: 10px;
   transition: $transition-effect;
+  border: 1px solid #2a2a2a;
 
   &:hover {
     background: linear-gradient(135deg, #b3b3b3 0%, #808080 100%);
