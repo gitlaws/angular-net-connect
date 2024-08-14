@@ -9,6 +9,27 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 0 2%; /* Add padding for better spacing on smaller screens */
+  background: linear-gradient(
+    135deg,
+    #3e1e68 0%,
+    #1e3e68 100%
+  ); /* Add gradient background */
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  backdrop-filter: blur(5px); /* Blur effect */
+  overflow: hidden;
+  z-index: 1;
 }
 
 .background-image {
@@ -17,10 +38,18 @@
   left: 50%;
   height: 50%;
   width: 50%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
-  z-index: 1;
-  filter: brightness(50%); /* Darken the image for better text contrast */
+  filter: brightness(
+    30%
+  ); /* Further darken the image for better text contrast */
   transform: translate(-50%, -50%); /* Center the image */
+  transition: transform 0.5s ease-in-out; /* Add smooth transition for hover effect */
+}
+
+.background-image:hover {
+  transform: translate(-50%, -50%) scale(1.05); /* Slightly enlarge image on hover */
 }
 
 .intro-content {
@@ -28,6 +57,11 @@
   z-index: 2;
   text-align: center;
   color: #ffffff; /* White text for contrast */
+  padding: 0 2%; /* Add padding for better spacing on smaller screens */
+  backdrop-filter: blur(10px); /* Add blur effect to background */
+  background: rgba(0, 0, 0, 0.5); /* Add semi-transparent background */
+  border-radius: 10px; /* Add rounded corners */
+  padding: 20px; /* Add padding inside the content box */
 }
 
 .intro-headline {
@@ -37,12 +71,78 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add subtle shadow for better readability */
+  animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
 }
 
 .intro-description {
   font-size: 1.5rem;
-  color: black;
+  color: #ffffff; /* Change to white for better contrast */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add subtle shadow for better readability */
+  animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation with delay */
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .intro-headline {
+    font-size: 2.5rem;
+  }
+
+  .intro-description {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-headline {
+    font-size: 2rem;
+  }
+
+  .intro-description {
+    font-size: 1rem;
+  }
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Queries for Responsive Design */
+// @media (max-width: 768px) {
+//   .intro-headline {
+//     font-size: 2.5rem;
+//   }
+
+//   .intro-description {
+//     font-size: 1.25rem;
+//   }
+
+//   .background-image {
+//     height: 90%;
+//     width: 90%;
+//   }
+// }
+
+// @media (max-width: 480px) {
+//   .intro-headline {
+//     font-size: 2rem;
+//   }
+
+//   .intro-description {
+//     font-size: 1rem;
+//   }
+
+//   .background-image {
+//     height: 100%;
+//     width: 100%;
+//   }
+// }
 
 @keyframes move {
   100% {
@@ -50,15 +150,15 @@
   }
 }
 
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #3e1e68;
-  overflow: hidden;
-}
+// .background {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+//   background: #3e1e68;
+//   overflow: hidden;
+// }
 
 .background span {
   width: 20vmin;
