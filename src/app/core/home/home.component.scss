@@ -231,54 +231,83 @@
   box-shadow: 40vmin 0 5.336198326941921vmin currentColor;
 }
 
-/* Content Section */
+/* Define a color palette */
+$primary-color: #e67e22; /* Blue */
+$secondary-color: #e74c3c; /* Green */
+$text-color: #333333; /* Dark gray */
+$background-color: #f9f9f9; /* Light gray */
+$border-color: #dddddd; /* Light border color */
+$link-color: #1a73e8; /* Link color */
+$link-hover-color: darken($link-color, 10%); /* Darker link color on hover */
+
+/* Content section styles */
 .content-section {
-  background-color: #f0f0f0; /* Light gray background */
-  font-family: "Arial", sans-serif; /* Sans-serif font family */
+  background-color: white;
   padding: 20px;
   margin: 20px;
-  margin-bottom: 3rem;
   border-radius: 8px;
+  border: 1px solid $border-color;
+  max-width: 1200px;
+  margin: 20px auto;
 }
 
-/* Style the section title */
+/* Section title styles */
 .section-title {
+  font-size: 28px;
   font-weight: bold;
+  color: $primary-color;
   text-align: center;
   margin-bottom: 20px;
+  font-family: "Helvetica", sans-serif;
 }
 
-/* Style the subsection titles */
+/* Subsection title styles */
 .subsection-title {
+  font-size: 22px;
   font-weight: bold;
+  color: $secondary-color;
   margin-top: 20px;
+  font-family: "Georgia", serif;
 }
 
-/* Style the subsection descriptions */
+/* Subsection description styles */
 .subsection-description {
+  font-size: 18px;
   margin-bottom: 10px;
+  line-height: 1.8;
 }
 
-/* Style the lists */
+/* List styles */
 .subsection-list {
-  color: #666666; /* Subtle gray color for bullet points */
   margin-left: 20px;
+  color: $text-color;
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
-/* Ensure the content is responsive */
+/* Link styles */
+a {
+  color: $link-color;
+  text-decoration: underline;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+/* Responsive styles */
 @media (max-width: 480px) {
-  /* Mobile styles */
   .content-section {
     padding: 10px;
     margin: 10px;
   }
 
   .section-title {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .subsection-title {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .subsection-description {
@@ -287,30 +316,9 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  /* Tablet styles */
   .content-section {
     padding: 15px;
     margin: 15px;
-  }
-
-  .section-title {
-    font-size: 20px;
-  }
-
-  .subsection-title {
-    font-size: 18px;
-  }
-
-  .subsection-description {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 769px) {
-  /* Desktop styles */
-  .content-section {
-    padding: 20px;
-    margin: 20px;
   }
 
   .section-title {
@@ -319,6 +327,25 @@
 
   .subsection-title {
     font-size: 20px;
+  }
+
+  .subsection-description {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  .content-section {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .subsection-title {
+    font-size: 22px;
   }
 
   .subsection-description {
