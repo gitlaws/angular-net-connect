@@ -17,22 +17,6 @@
   // ); /* Add gradient background */
 }
 
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #000000;
-  // background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-  backdrop-filter: blur(5px); /* Blur effect */
-  overflow: hidden;
-  z-index: 1;
-}
-
 .background-image {
   position: absolute;
   top: 50%;
@@ -42,7 +26,12 @@
   max-width: 50%;
   max-height: 50%;
   object-fit: contain;
-
+  // background: rgba(
+  //   0,
+  //   0,
+  //   0,
+  //   0.5
+  // ); /* Semi-transparent overlay 
   filter: brightness(
     30%
   ); /* Further darken the image for better text contrast */
@@ -122,6 +111,22 @@
 //   background: #000000;
 //   overflow: hidden;
 // }
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  // background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  backdrop-filter: blur(5px); /* Blur effect */
+  overflow: hidden;
+  z-index: 0;
+}
 
 .background span {
   width: 20vmin;
