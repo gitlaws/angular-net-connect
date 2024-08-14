@@ -2,62 +2,124 @@
 @import "../../../styles/_mixins.scss";
 @import "../../../styles/_variables.scss";
 
-.intro-section {
-  position: relative;
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding: 0 2%; /* Add padding for better spacing on smaller screens */
-  // background: linear-gradient(
-  //   135deg,
-  //   #3e1e68 0%,
-  //   #1e3e68 100%
-  // ); /* Add gradient background */
-}
-
-.background-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 50%;
-  width: 50%;
-  max-width: 50%;
-  max-height: 50%;
-  object-fit: contain;
-  // background: rgba(
-  //   0,
-  //   0,
-  //   0,
-  //   0.5
-  // ); /* Semi-transparent overlay
-  filter: brightness(
-    30%
-  ); /* Further darken the image for better text contrast */
-  transform: translate(-50%, -50%); /* Center the image */
-  transition: transform 0.5s ease-in-out; /* Add smooth transition for hover effect */
-}
-
-// .background-image:hover {
-//   transform: translate(-50%, -50%) scale(1.05); /* Slightly enlarge image on hover */
+// .intro-section {
+//   position: relative;
+//   height: 100vh; /* Full viewport height */
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   overflow: hidden;
+//   padding: 0 2%; /* Add padding for better spacing on smaller screens */
+//   // background: linear-gradient(
+//   //   135deg,
+//   //   #3e1e68 0%,
+//   //   #1e3e68 100%
+//   // ); /* Add gradient background */
 // }
 
-.intro-content {
+// .background-image {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   height: 50%;
+//   width: 50%;
+//   max-width: 50%;
+//   max-height: 50%;
+//   object-fit: contain;
+//   background: rgba(0, 0, 0, 0.5);
+//   filter: brightness(30%); /* Adjust the brightness as needed */
+
+//   /* Remove any borders */
+//   border: none;
+
+//   /* Optional: Remove padding if it creates visible edges */
+//   padding: 0;
+
+//   transform: translate(-50%, -50%); /* Center the image */
+//   transition: transform 0.5s ease-in-out; /* Add smooth transition for hover effect */
+// }
+
+// // .background-image:hover {
+// //   transform: translate(-50%, -50%) scale(1.05); /* Slightly enlarge image on hover */
+// // }
+
+// .intro-content {
+//   position: relative;
+//   z-index: 2;
+//   text-align: center;
+//   // color: #ffffff; /* White text for contrast */
+//   padding: 0 2%; /* Add padding for better spacing on smaller screens */
+//   backdrop-filter: blur(10px); /* Add blur effect to background */
+//   background: rgba(0, 0, 0, 0.5); /* Add semi-transparent background */
+//   border-radius: 10px; /* Add rounded corners */
+//   padding: 20px; /* Add padding inside the content box */
+// }
+
+// .intro-headline {
+//   font-size: 3rem;
+//   margin-bottom: 10px;
+//   background: linear-gradient(to right, #ff00ff 0%, #00ffff 100%);
+//   -webkit-background-clip: text;
+//   background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add subtle shadow for better readability */
+//   animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+// }
+
+// .intro-description {
+//   font-size: 1.5rem;
+//   color: #ffffff; /* Change to white for better contrast */
+//   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add subtle shadow for better readability */
+//   animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation with delay */
+// }
+
+/* Media Queries for Responsive Design */
+// @media (max-width: 768px) {
+//   .intro-headline {
+//     font-size: 2.5rem;
+//   }
+
+//   .intro-description {
+//     font-size: 1.25rem;
+//   }
+// }
+
+// @media (max-width: 480px) {
+//   .intro-headline {
+//     font-size: 2rem;
+//   }
+
+//   .intro-description {
+//     font-size: 1rem;
+//   }
+// }
+
+.intro-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  z-index: 2;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide overflow to ensure the background image doesn't cause scrollbars */
+  padding: 20px;
+  background-color: #000; /* Fallback background color */
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  // color: #ffffff; /* White text for contrast */
-  padding: 0 2%; /* Add padding for better spacing on smaller screens */
-  backdrop-filter: blur(10px); /* Add blur effect to background */
-  background: rgba(0, 0, 0, 0.5); /* Add semi-transparent background */
-  border-radius: 10px; /* Add rounded corners */
-  padding: 20px; /* Add padding inside the content box */
+  padding: 20px;
+  position: relative;
+  z-index: 1; /* Ensure content is above the background image */
 }
 
 .intro-headline {
   font-size: 3rem;
-  margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Increase margin for better spacing */
   background: linear-gradient(to right, #ff00ff 0%, #00ffff 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -71,9 +133,22 @@
   color: #ffffff; /* Change to white for better contrast */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add subtle shadow for better readability */
   animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation with delay */
+  max-width: 600px; /* Limit line length for better readability */
+  margin: 0 20px 20px; /* Add margin for spacing */
 }
 
-/* Media Queries for Responsive Design */
+.background-image {
+  position: absolute;
+  top: 100%; /* Adjust the top position to sit under the content */
+  left: 50%;
+  height: 30%; /* Adjust the height to fit well within the content area */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits within the specified height */
+  transform: translate(-50%, -50%); /* Center the image */
+  z-index: 0; /* Place the image behind the text */
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
   .intro-headline {
     font-size: 2.5rem;
@@ -81,6 +156,10 @@
 
   .intro-description {
     font-size: 1.25rem;
+  }
+
+  .background-image {
+    height: 25%; /* Further reduce the height for smaller screens */
   }
 }
 
@@ -92,8 +171,11 @@
   .intro-description {
     font-size: 1rem;
   }
-}
 
+  .background-image {
+    height: 20%; /* Further reduce the height for smaller screens */
+  }
+}
 /* Keyframes for fade-in animation */
 
 @keyframes move {
