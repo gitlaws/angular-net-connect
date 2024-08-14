@@ -22,172 +22,174 @@
   </div>
 </div>
 
-<section class="content-section">
-  <h2 class="section-title">Understanding Core Angular Constructs</h2>
-  <div class="section-description">
-    <h3 class="subsection-title">Components:</h3>
-    <p class="subsection-description">
-      The visual building blocks of Angular applications. Each component
-      encapsulates a portion of the user interface (UI) and its associated
-      logic. Composed of two primary parts:
-    </p>
-    <ul class="subsection-list">
-      <li>Template: Defines the HTML structure of the component's view.</li>
-      <li>
-        Class: Contains the component's TypeScript logic, handling data, events,
-        and interactions with other parts of the application.
-      </li>
-    </ul>
-    <p class="subsection-description">
-      Components are hierarchical, creating a tree-like structure that reflects
-      the UI's composition.
-    </p>
-    <h3 class="subsection-title">Key concepts:</h3>
-    <ul class="subsection-list">
-      <li>
-        Selectors: Used to identify and insert components into other components'
-        templates.
-      </li>
-      <li>
-        Inputs and Outputs: Mechanisms for data communication between parent and
-        child components.
-      </li>
-      <li>
-        Lifecycle hooks: Methods invoked at specific stages of a component's
-        lifecycle (e.g., creation, update, destruction).
-      </li>
-    </ul>
-    <h3 class="subsection-title">Pipes:</h3>
-    <p class="subsection-description">
-      Transform data before displaying it in the template. Pure and impure pipes
-      are available:
-    </p>
-    <ul class="subsection-list">
-      <li>
-        Pure pipes are deterministic and cache results, recalculating only when
-        input values change.
-      </li>
-      <li>
-        Impure pipes are not cached and re-execute on every change detection
-        cycle.
-      </li>
-    </ul>
-    <p class="subsection-description">
-      Built-in pipes: uppercase, lowercase, date, currency, number, and more.
-      Custom pipes can be created to perform specific data transformations.
-    </p>
-    <h3 class="subsection-title">Services:</h3>
-    <p class="subsection-description">
-      Reusable logic containers shared across components. Ideal for handling
-      data fetching, API interactions, state management, and other shared
-      functionalities. Injected into components using dependency injection.
-    </p>
-    <h3 class="subsection-title">Directives:</h3>
-    <p class="subsection-description">
-      Modify the appearance or behavior of DOM elements. Two types:
-    </p>
-    <ul class="subsection-list">
-      <li>Component directives: Create new custom elements.</li>
-      <li>Attribute directives: Change the behavior of existing elements.</li>
-      <li>
-        Structural directives: Modify the DOM structure by adding, removing, or
-        manipulating elements.
-      </li>
-    </ul>
-    <p class="subsection-description">
-      Built-in directives: ngIf, ngFor, ngStyle, ngClass, and more. Custom
-      directives can be created to implement custom behaviors.
-    </p>
-    <h3 class="subsection-title">API Integration for Dynamic Applications</h3>
-    <p class="subsection-description">
-      Angular applications often require real-world data to deliver a rich user
-      experience. API integration connects the application to external data
-      sources. The HttpClient module is Angular's primary tool for making HTTP
-      requests.
-    </p>
-    <h3 class="subsection-title">Best practices:</h3>
-    <ul class="subsection-list">
-      <li>Design clear API contracts.</li>
-      <li>Implement proper error handling and retry mechanisms.</li>
-      <li>Optimize performance through caching and lazy loading.</li>
-      <li>Secure API communication.</li>
-    </ul>
-    <h3 class="subsection-title">
-      Combining Core Constructs and API Integration
-    </h3>
-    <p class="subsection-description">
-      By effectively utilizing components, pipes, services, and directives,
-      along with seamless API integration, developers can create robust and
-      scalable Angular applications.
-    </p>
-    <p class="subsection-description">
-      Components structure the UI, displaying data fetched from APIs using
-      pipes. Services handle API interactions, providing data to components.
-      Directives enhance the UI's behavior and appearance based on data and user
-      interactions.
-    </p>
-    <p class="subsection-description">
-      Together, these elements create a cohesive and dynamic user experience.
-    </p>
-    <h3 class="subsection-title">Application Versatility</h3>
-    <p class="subsection-description">
-      The flexibility of Angular empowers developers to build a wide range of
-      applications across various domains:
-    </p>
+<div class="section-wrapper">
+  <section class="content-section">
+    <h2 class="section-title">Understanding Core Angular Constructs</h2>
+    <div class="section-description">
+      <h3 class="subsection-title">Components:</h3>
+      <p class="subsection-description">
+        The visual building blocks of Angular applications. Each component
+        encapsulates a portion of the user interface (UI) and its associated
+        logic. Composed of two primary parts:
+      </p>
+      <ul class="subsection-list">
+        <li>Template: Defines the HTML structure of the component's view.</li>
+        <li>
+          Class: Contains the component's TypeScript logic, handling data,
+          events, and interactions with other parts of the application.
+        </li>
+      </ul>
+      <p class="subsection-description">
+        Components are hierarchical, creating a tree-like structure that
+        reflects the UI's composition.
+      </p>
+      <h3 class="subsection-title">Key concepts:</h3>
+      <ul class="subsection-list">
+        <li>
+          Selectors: Used to identify and insert components into other
+          components' templates.
+        </li>
+        <li>
+          Inputs and Outputs: Mechanisms for data communication between parent
+          and child components.
+        </li>
+        <li>
+          Lifecycle hooks: Methods invoked at specific stages of a component's
+          lifecycle (e.g., creation, update, destruction).
+        </li>
+      </ul>
+      <h3 class="subsection-title">Pipes:</h3>
+      <p class="subsection-description">
+        Transform data before displaying it in the template. Pure and impure
+        pipes are available:
+      </p>
+      <ul class="subsection-list">
+        <li>
+          Pure pipes are deterministic and cache results, recalculating only
+          when input values change.
+        </li>
+        <li>
+          Impure pipes are not cached and re-execute on every change detection
+          cycle.
+        </li>
+      </ul>
+      <p class="subsection-description">
+        Built-in pipes: uppercase, lowercase, date, currency, number, and more.
+        Custom pipes can be created to perform specific data transformations.
+      </p>
+      <h3 class="subsection-title">Services:</h3>
+      <p class="subsection-description">
+        Reusable logic containers shared across components. Ideal for handling
+        data fetching, API interactions, state management, and other shared
+        functionalities. Injected into components using dependency injection.
+      </p>
+      <h3 class="subsection-title">Directives:</h3>
+      <p class="subsection-description">
+        Modify the appearance or behavior of DOM elements. Two types:
+      </p>
+      <ul class="subsection-list">
+        <li>Component directives: Create new custom elements.</li>
+        <li>Attribute directives: Change the behavior of existing elements.</li>
+        <li>
+          Structural directives: Modify the DOM structure by adding, removing,
+          or manipulating elements.
+        </li>
+      </ul>
+      <p class="subsection-description">
+        Built-in directives: ngIf, ngFor, ngStyle, ngClass, and more. Custom
+        directives can be created to implement custom behaviors.
+      </p>
+      <h3 class="subsection-title">API Integration for Dynamic Applications</h3>
+      <p class="subsection-description">
+        Angular applications often require real-world data to deliver a rich
+        user experience. API integration connects the application to external
+        data sources. The HttpClient module is Angular's primary tool for making
+        HTTP requests.
+      </p>
+      <h3 class="subsection-title">Best practices:</h3>
+      <ul class="subsection-list">
+        <li>Design clear API contracts.</li>
+        <li>Implement proper error handling and retry mechanisms.</li>
+        <li>Optimize performance through caching and lazy loading.</li>
+        <li>Secure API communication.</li>
+      </ul>
+      <h3 class="subsection-title">
+        Combining Core Constructs and API Integration
+      </h3>
+      <p class="subsection-description">
+        By effectively utilizing components, pipes, services, and directives,
+        along with seamless API integration, developers can create robust and
+        scalable Angular applications.
+      </p>
+      <p class="subsection-description">
+        Components structure the UI, displaying data fetched from APIs using
+        pipes. Services handle API interactions, providing data to components.
+        Directives enhance the UI's behavior and appearance based on data and
+        user interactions.
+      </p>
+      <p class="subsection-description">
+        Together, these elements create a cohesive and dynamic user experience.
+      </p>
+      <h3 class="subsection-title">Application Versatility</h3>
+      <p class="subsection-description">
+        The flexibility of Angular empowers developers to build a wide range of
+        applications across various domains:
+      </p>
 
-    <p class="subsection-description">Enterprise Applications:</p>
-    <ul class="subsection-list">
-      <li>
-        Customer Relationship Management (CRM): Manage customer interactions,
-        sales pipelines, and marketing campaigns.
-      </li>
-      <li>
-        Enterprise Resource Planning (ERP): Integrate financial, human
-        resources, and supply chain management.
-      </li>
-      <li>
-        Content Management Systems (CMS): Create and manage digital content.
-      </li>
-      <li>
-        Business Intelligence (BI) Dashboards: Visualize and analyze business
-        data.
-      </li>
-    </ul>
+      <p class="subsection-description">Enterprise Applications:</p>
+      <ul class="subsection-list">
+        <li>
+          Customer Relationship Management (CRM): Manage customer interactions,
+          sales pipelines, and marketing campaigns.
+        </li>
+        <li>
+          Enterprise Resource Planning (ERP): Integrate financial, human
+          resources, and supply chain management.
+        </li>
+        <li>
+          Content Management Systems (CMS): Create and manage digital content.
+        </li>
+        <li>
+          Business Intelligence (BI) Dashboards: Visualize and analyze business
+          data.
+        </li>
+      </ul>
 
-    <p class="subsection-description">Web Applications:</p>
-    <ul class="subsection-list">
-      <li>
-        E-commerce Platforms: Build online stores with product catalogs,
-        shopping carts, and checkout processes.
-      </li>
-      <li>
-        Social Networking Sites: Develop platforms for user interaction, content
-        sharing, and community building.
-      </li>
-      <li>
-        Online Education Platforms: Create interactive learning experiences with
-        video content, assessments, and progress tracking.
-      </li>
-      <li>
-        Portfolio Websites: Showcase personal or professional work with dynamic
-        content and interactive features.
-      </li>
-    </ul>
+      <p class="subsection-description">Web Applications:</p>
+      <ul class="subsection-list">
+        <li>
+          E-commerce Platforms: Build online stores with product catalogs,
+          shopping carts, and checkout processes.
+        </li>
+        <li>
+          Social Networking Sites: Develop platforms for user interaction,
+          content sharing, and community building.
+        </li>
+        <li>
+          Online Education Platforms: Create interactive learning experiences
+          with video content, assessments, and progress tracking.
+        </li>
+        <li>
+          Portfolio Websites: Showcase personal or professional work with
+          dynamic content and interactive features.
+        </li>
+      </ul>
 
-    <p class="subsection-description">Progressive Web Apps (PWAs):</p>
-    <ul class="subsection-list">
-      <li>
-        Deliver app-like experiences on the web with offline capabilities, push
-        notifications, and fast loading times.
-      </li>
-    </ul>
+      <p class="subsection-description">Progressive Web Apps (PWAs):</p>
+      <ul class="subsection-list">
+        <li>
+          Deliver app-like experiences on the web with offline capabilities,
+          push notifications, and fast loading times.
+        </li>
+      </ul>
 
-    <p class="subsection-description">
-      By mastering Angular's core concepts and understanding its adaptability,
-      developers can create innovative and high-performing applications that
-      meet the diverse needs of modern businesses and users.
-    </p>
-  </div>
-</section>
+      <p class="subsection-description">
+        By mastering Angular's core concepts and understanding its adaptability,
+        developers can create innovative and high-performing applications that
+        meet the diverse needs of modern businesses and users.
+      </p>
+    </div>
+  </section>
+</div>
 
 <app-footer></app-footer>

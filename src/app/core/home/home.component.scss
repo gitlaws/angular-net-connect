@@ -241,6 +241,14 @@ $link-color: #1a73e8; /* Link color */
 $link-hover-color: darken($link-color, 10%); /* Darker link color on hover */
 
 /* Content section styles */
+.section-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure it takes the full height of the viewport */
+  padding: 20px; /* Optional: Add padding if needed */
+}
+
 .content-section {
   background-color: white;
   padding: 20px;
@@ -248,6 +256,7 @@ $link-hover-color: darken($link-color, 10%); /* Darker link color on hover */
   border-radius: 8px;
   border: 1px solid $border-color;
   max-width: 1200px;
+  width: 100%;
   margin: 20px auto;
 }
 
