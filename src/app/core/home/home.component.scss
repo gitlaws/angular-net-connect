@@ -31,7 +31,7 @@
   //   0,
   //   0,
   //   0.5
-  // ); /* Semi-transparent overlay 
+  // ); /* Semi-transparent overlay
   filter: brightness(
     30%
   ); /* Further darken the image for better text contrast */
@@ -231,7 +231,6 @@
   box-shadow: 40vmin 0 5.336198326941921vmin currentColor;
 }
 
-/* Define the styles for the content section */
 .content-section {
   background-color: #f0f0f0; /* Light gray background */
   font-family: "Arial", sans-serif; /* Sans-serif font family */
@@ -266,9 +265,62 @@
 }
 
 /* Ensure the content is responsive */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+  /* Mobile styles */
   .content-section {
     padding: 10px;
     margin: 10px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .subsection-title {
+    font-size: 16px;
+  }
+
+  .subsection-description {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Tablet styles */
+  .content-section {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .subsection-title {
+    font-size: 18px;
+  }
+
+  .subsection-description {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Desktop styles */
+  .content-section {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .subsection-title {
+    font-size: 20px;
+  }
+
+  .subsection-description {
+    font-size: 18px;
   }
 }
