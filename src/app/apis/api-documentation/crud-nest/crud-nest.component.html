@@ -1,1 +1,144 @@
-<p>crud-nest works!</p>
+<div class="container">
+  <nav>
+    <ul class="tab-list" id="myTab" role="tablist">
+      <li class="tab-item" role="presentation">
+        <a
+          class="tab-link active"
+          id="home-tab"
+          data-toggle="tab"
+          href="#home"
+          role="tab"
+          aria-controls="home"
+          aria-selected="true"
+          >Add User</a
+        >
+      </li>
+      <li class="tab-item" role="presentation">
+        <a
+          class="tab-link"
+          id="profile-tab"
+          data-toggle="tab"
+          href="#profile"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+          >User List</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <div class="tab-content" id="myTabContent">
+    <div
+      class="tab-pane active"
+      id="home"
+      role="tabpanel"
+      aria-labelledby="home-tab"
+    >
+      <form [formGroup]="userForm" (ngSubmit)="SubmitForm()">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="formGroupExampleInput">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="Name"
+              formControlName="Name"
+              id="formGroupExampleInput"
+              placeholder="Enter name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Mobile No.</label>
+            <input
+              type="number"
+              class="form-control"
+              name="Mobile"
+              formControlName="Mobile"
+              id="formGroupExampleInput2"
+              placeholder="Enter mobile"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="formGroupExampleInput">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              name="Email"
+              formControlName="Email"
+              id="formGroupExampleInput"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Age</label>
+            <input
+              type="number"
+              class="form-control"
+              name="Age"
+              formControlName="Age"
+              id="formGroupExampleInput2"
+              placeholder="Enter age"
+            />
+          </div>
+        </div>
+
+        <div class="form-row btns">
+          <button type="submit" class="btn-primary">
+            {{ isEditMode ? "Update" : "Add" }}
+          </button>
+          <button type="reset" class="btn-secondary" (click)="resetForm()">
+            Reset
+          </button>
+        </div>
+      </form>
+    </div>
+    <div
+      class="tab-pane"
+      id="profile"
+      role="tabpanel"
+      aria-labelledby="profile-tab"
+    >
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Age</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of users">
+            <th scope="row">{{ item.id }}</th>
+            <td>{{ item.Name }}</td>
+            <td>{{ item.Email }}</td>
+            <td>{{ item.Mobile }}</td>
+            <td>{{ item.Age }}</td>
+
+            <td>
+              <button
+                type="button"
+                (click)="GetUserByID(item.id)"
+                class="btn-primary"
+              >
+                Edit
+              </button>
+              <button
+                type="button"
+                (click)="DeleteUserByID(item.id)"
+                class="btn-danger"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
