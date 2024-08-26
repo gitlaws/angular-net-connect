@@ -10,7 +10,7 @@
   height: 100vh; /* Full viewport height */
   overflow: hidden; /* Hide overflow to ensure the background image doesn't cause scrollbars */
   padding: 20px;
-  background-color: #000; /* Fallback background color */
+  background-color: #d3d3d3; /* Light theme background color */
 }
 
 .intro-content {
@@ -238,11 +238,11 @@
 }
 
 /* Define a color palette */
-$primary-color: #e67e22; /* Blue */
-$secondary-color: #e74c3c; /* Green */
-$text-color: #333333; /* Dark gray */
-$background-color: #f9f9f9; /* Light gray */
-$border-color: #dddddd; /* Light border color */
+$home-section-title-primary-color: #e67e22; /* Blue */
+$home-section-title-secondary-color: #e74c3c; /* Green */
+$home-list-text-color: #333333; /* Dark gray */
+$home-content-background-color: #2a2a2a; /* Light gray */
+$home-content-border-color: #dddddd; /* Light border color */
 $link-color: #1a73e8; /* Link color */
 $link-hover-color: darken($link-color, 10%); /* Darker link color on hover */
 
@@ -251,16 +251,16 @@ $link-hover-color: darken($link-color, 10%); /* Darker link color on hover */
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensure it takes the full height of the viewport */
-  padding: 20px; /* Optional: Add padding if needed */
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .content-section {
-  background-color: white;
+  background-color: $home-content-background-color;
   padding: 20px;
   margin: 20px;
   border-radius: 8px;
-  border: 1px solid $border-color;
+  border: 1px solid $home-content-border-color;
   max-width: 1200px;
   width: 100%;
   margin: 20px auto;
@@ -270,7 +270,7 @@ $link-hover-color: darken($link-color, 10%); /* Darker link color on hover */
 .section-title {
   font-size: 28px;
   font-weight: bold;
-  color: $primary-color;
+  color: $home-section-title-primary-color;
   text-align: center;
   margin-bottom: 20px;
   font-family: "Helvetica", sans-serif;
@@ -280,7 +280,7 @@ $link-hover-color: darken($link-color, 10%); /* Darker link color on hover */
 .subsection-title {
   font-size: 22px;
   font-weight: bold;
-  color: $secondary-color;
+  color: $home-section-title-secondary-color;
   margin-top: 20px;
   font-family: "Georgia", serif;
 }
@@ -295,7 +295,7 @@ $link-hover-color: darken($link-color, 10%); /* Darker link color on hover */
 /* List styles */
 .subsection-list {
   margin-left: 20px;
-  color: $text-color;
+  color: $home-list-text-color;
   list-style-type: disc;
   padding-left: 20px;
 }
