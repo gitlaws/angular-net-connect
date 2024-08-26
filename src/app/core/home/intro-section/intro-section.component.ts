@@ -1,11 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CarouselComponent } from '../carousel/carousel.component';
 
 @Component({
   selector: 'app-intro-section',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './intro-section.component.html',
-  styleUrl: './intro-section.component.scss',
+  styleUrls: ['./intro-section.component.scss'],
+  standalone: true,
+  imports: [CommonModule, CarouselComponent],
 })
-export class IntroSectionComponent {}
+export class IntroSectionComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit(): void {}
+}
