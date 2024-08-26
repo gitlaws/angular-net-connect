@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { CarouselComponent } from '../carousel/carousel.component';
+import { CarouselComponent } from '../../../components/carousel/carousel.component';
 
 @Component({
   selector: 'app-intro-section',
