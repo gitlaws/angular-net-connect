@@ -35,8 +35,12 @@
 .intro-headline {
   font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 20px; /* Increase margin for better spacing */
-  background: linear-gradient(to right, #ff00ff 0%, #00ffff 100%);
+  margin-bottom: 20px;
+  background: linear-gradient(270deg, #ffffff, #d3d3d3);
+  // background: linear-gradient(270deg, #ff4500, #9400d3);
+  // background: linear-gradient(270deg, #ffff00, #ff00ff);
+  // background: linear-gradient(270deg, #ff00ff, #39ff14);
+
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -107,16 +111,6 @@
     transform: translate3d(0, 0, 1px) rotate(360deg);
   }
 }
-
-// .background {
-//   position: fixed;
-//   width: 100vw;
-//   height: 100vh;
-//   top: 0;
-//   left: 0;
-//   background: #000000;
-//   overflow: hidden;
-// }
 
 .background {
   position: absolute;
@@ -238,13 +232,13 @@
 }
 
 /* Define a color palette */
-$home-section-title-primary-color: #e67e22; /* Orange */
-$home-section-title-secondary-color: #e74c3c; /* Red */
-$home-list-text-color: #b3b3b3; /* Light Gray */
-$home-content-background-color: #1a1a1a; /* Almost Black */
-$home-content-border-color: #333333; /* Dark Gray */
-$link-color: #1a73e8; /* Link color */
-$link-hover-color: darken($link-color, 10%); /* Darker link color on hover */
+$home-section-title-primary-color: #ff073a;
+$home-section-title-secondary-color: #1e90ff;
+$home-content-background-color: #1a1a1a;
+$home-list-text-color: #b3b3b3;
+$home-content-border-color: #1a1a1a;
+$link-color: #1a73e8;
+$link-hover-color: darken($link-color, 10%);
 
 /* Content section styles */
 .section-wrapper {
