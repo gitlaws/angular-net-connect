@@ -16,6 +16,7 @@ import { InfiniteScrollComponent } from '../infinite-scroll/infinite-scroll.comp
 import { PagingComponent } from '../paging/paging.component';
 import { FieldsetComponent } from '../fieldset/fieldset.component';
 import { PasswordComponent } from '../password/password.component';
+import { CarouselComponent } from '../carousel/carousel.component';
 
 @Component({
   selector: 'app-component-documentation',
@@ -36,6 +37,7 @@ import { PasswordComponent } from '../password/password.component';
     PagingComponent,
     FieldsetComponent,
     PasswordComponent,
+    CarouselComponent,
   ],
   templateUrl: './component-documentation.component.html',
   styleUrls: [
