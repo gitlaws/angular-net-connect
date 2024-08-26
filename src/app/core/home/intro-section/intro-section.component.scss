@@ -1,15 +1,107 @@
 // Variables for colors and spacing
-$primary-color: #ff7e5f;
-$secondary-color: #feb47b;
+// $primary-color: #ff7e5f;
+// $secondary-color: #feb47b;
+
+// $primary-color: #3498db;
+// $secondary-color: #2c3e50;
+
+$primary-color: #87ceeb;
+$secondary-color: #000080;
+
+// $primary-color: #008080;
+// $secondary-color: #191970;
+
+// $primary-color: #1e90ff;
+// $secondary-color: #4169e1;
+
+// $primary-color: #00bfff;
+// $secondary-color: #4682b4;
+
+// $primary-color: #5f9ea0;
+// $secondary-color: #2f4f4f;
+
+// $primary-color: #00ced1;
+// $secondary-color: #20b2aa;
+
+// $primary-color: #40e0d0;
+// $secondary-color: #48d1cc;
+
+// $primary-color: #00ffff;
+// $secondary-color: #7fffd4;
+
+// $primary-color: #4682b4;
+// $secondary-color: #5f9ea0;
+
+// $primary-color: #6495ed;
+// $secondary-color: #1e90ff;
+
+// $primary-color: #4169e1;
+// $secondary-color: #0000ff;
+
+// $primary-color: #0000cd;
+// $secondary-color: #00008b;
+
+// $primary-color: #000080;
+// $secondary-color: #191970;
+
+// $primary-color: #b0c4de;
+// $secondary-color: #4682b4;
+
+// $primary-color: #add8e6;
+// $secondary-color: #87cefa;
+
+// $primary-color: #87ceeb;
+// $secondary-color: #00bfff;
+
+// $primary-color: #1e90ff;
+// $secondary-color: #6495ed;
+
+// $primary-color: #4169e1;
+// $secondary-color: #4682b4;
+
+.intro-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+}
+
 $text-color: #fff;
 $shadow-color: rgba(0, 0, 0, 0.1);
 $spacing-unit: 20px;
 $font-family: "Roboto", sans-serif;
 
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .intro-section {
   padding: 200px 0;
   background: linear-gradient(to right, $primary-color, $secondary-color);
+  background-size: 200% 200%;
   text-align: center;
+  animation: backgroundAnimation 10s infinite ease-in-out;
 }
 
 .intro-content {
