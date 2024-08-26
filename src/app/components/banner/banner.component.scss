@@ -1,0 +1,228 @@
+.intro-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide overflow to ensure the background image doesn't cause scrollbars */
+  padding: 20px;
+  background-color: #d3d3d3; /* Light theme background color */
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1; /* Ensure content is above the background image */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Semi-transparent background for better readability */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.intro-headline {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(270deg, #ffffff, #d3d3d3);
+  // background: linear-gradient(270deg, #ff4500, #9400d3);
+  // background: linear-gradient(270deg, #ffff00, #ff00ff);
+  // background: linear-gradient(270deg, #ff00ff, #39ff14);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add subtle shadow for better readability */
+  animation: fadeIn 1s ease-in-out; /* Add fade-in animation */
+}
+
+.intro-description {
+  font-size: 1.5rem;
+  color: #ffffff; /* Change to white for better contrast */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add subtle shadow for better readability */
+  animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation with delay */
+  max-width: 600px; /* Limit line length for better readability */
+  margin: 0 20px 20px; /* Add margin for spacing */
+}
+
+.background-image {
+  height: 15%; /* Reduce the height to make the image smaller */
+  width: 10%; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits within the specified height */
+  margin-top: 20px; /* Add margin to separate the image from the text */
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .intro-headline {
+    font-size: 2.5rem;
+  }
+
+  .intro-description {
+    font-size: 1.25rem;
+  }
+
+  .background-image {
+    height: 12%; /* Further reduce the height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-headline {
+    font-size: 2rem;
+  }
+
+  .intro-description {
+    font-size: 1rem;
+  }
+
+  .background-image {
+    height: 10%; /* Further reduce the height for smaller screens */
+  }
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Keyframes for fade-in animation */
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  // background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  backdrop-filter: blur(5px); /* Blur effect */
+  overflow: hidden;
+  z-index: 0;
+}
+
+.background span {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 20vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation: move;
+  animation-duration: 3;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.background span:nth-child(0) {
+  color: #5a088c;
+  top: 64%;
+  left: 78%;
+  animation-duration: 131s;
+  animation-delay: -110s;
+  transform-origin: 8vw 6vh;
+  box-shadow: 40vmin 0 5.800144786418318vmin currentColor;
+}
+.background span:nth-child(1) {
+  color: #410745;
+  top: 21%;
+  left: 90%;
+  animation-duration: 297s;
+  animation-delay: -69s;
+  transform-origin: -22vw 10vh;
+  box-shadow: -40vmin 0 5.461311077709971vmin currentColor;
+}
+.background span:nth-child(2) {
+  color: #410745;
+  top: 65%;
+  left: 18%;
+  animation-duration: 423s;
+  animation-delay: -117s;
+  transform-origin: 8vw 24vh;
+  box-shadow: 40vmin 0 5.290219078780467vmin currentColor;
+}
+.background span:nth-child(3) {
+  color: #b90d82;
+  top: 12%;
+  left: 12%;
+  animation-duration: 146s;
+  animation-delay: -254s;
+  transform-origin: 12vw 2vh;
+  box-shadow: 40vmin 0 5.4042312301091675vmin currentColor;
+}
+.background span:nth-child(4) {
+  color: #b90d82;
+  top: 36%;
+  left: 57%;
+  animation-duration: 244s;
+  animation-delay: -117s;
+  transform-origin: -22vw 11vh;
+  box-shadow: -40vmin 0 5.013321129752886vmin currentColor;
+}
+.background span:nth-child(5) {
+  color: #b90d82;
+  top: 73%;
+  left: 52%;
+  animation-duration: 200s;
+  animation-delay: -302s;
+  transform-origin: 24vw 19vh;
+  box-shadow: 40vmin 0 5.663412160947554vmin currentColor;
+}
+.background span:nth-child(6) {
+  color: #410745;
+  top: 19%;
+  left: 35%;
+  animation-duration: 226s;
+  animation-delay: -333s;
+  transform-origin: 12vw 11vh;
+  box-shadow: 40vmin 0 5.446834382902147vmin currentColor;
+}
+.background span:nth-child(7) {
+  color: #410745;
+  top: 98%;
+  left: 68%;
+  animation-duration: 32s;
+  animation-delay: -380s;
+  transform-origin: 18vw 9vh;
+  box-shadow: -40vmin 0 5.168899103175955vmin currentColor;
+}
+.background span:nth-child(8) {
+  color: #b90d82;
+  top: 69%;
+  left: 34%;
+  animation-duration: 336s;
+  animation-delay: -57s;
+  transform-origin: 3vw 25vh;
+  box-shadow: 40vmin 0 5.280758168460229vmin currentColor;
+}
+.background span:nth-child(9) {
+  color: #5a088c;
+  top: 73%;
+  left: 29%;
+  animation-duration: 260s;
+  animation-delay: -377s;
+  transform-origin: 3vw -17vh;
+  box-shadow: 40vmin 0 5.336198326941921vmin currentColor;
+}

@@ -2,11 +2,6 @@
 @import "../../../styles/_mixins.scss";
 @import "../../../styles/_variables.scss";
 
-.intro-container {
-  // padding-top: 100px;
-  // color: white;
-}
-
 /* Define a color palette */
 $home-section-title-primary-color: #ffffff;
 $home-section-title-secondary-color: #1e90ff;
@@ -23,7 +18,7 @@ $link-hover-color: darken($link-color, 10%);
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .content-section {
@@ -44,7 +39,9 @@ $link-hover-color: darken($link-color, 10%);
   color: $home-section-title-primary-color;
   text-align: center;
   margin-bottom: 20px;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Lato", sans-serif; /* Updated font */
+  letter-spacing: 0.5px; /* Adjust letter spacing */
+  line-height: 1.5; /* Adjust line spacing */
 }
 
 /* Subsection title styles */
@@ -53,15 +50,19 @@ $link-hover-color: darken($link-color, 10%);
   font-weight: bold;
   color: $home-section-title-secondary-color;
   margin-top: 20px;
-  font-family: "Georgia", serif;
+  font-family: "Lato", sans-serif; /* Updated font */
+  letter-spacing: 0.3px; /* Adjust letter spacing */
+  line-height: 1.4; /* Adjust line spacing */
 }
 
 /* Subsection description styles */
 .subsection-description {
   font-size: 18px;
   margin-bottom: 10px;
-  line-height: 1.8;
+  line-height: 1.8; /* Adjust line spacing */
   color: white;
+  font-family: "Merriweather", serif; /* Updated font */
+  letter-spacing: 0.2px; /* Adjust letter spacing */
 }
 
 /* List styles */
@@ -70,72 +71,18 @@ $link-hover-color: darken($link-color, 10%);
   color: $home-list-text-color;
   list-style-type: disc;
   padding-left: 20px;
+  line-height: 1.6; /* Adjust line spacing */
+  font-family: "Merriweather", serif; /* Updated font */
 }
 
 /* Link styles */
 a {
   color: $link-color;
   text-decoration: underline;
+  letter-spacing: 0.1px; /* Adjust letter spacing */
+  font-family: "Lato", sans-serif; /* Updated font */
 
   &:hover {
     color: $link-hover-color;
-  }
-}
-
-/* Responsive styles */
-@media (max-width: 480px) {
-  .content-section {
-    padding: 10px;
-    margin: 10px;
-  }
-
-  .section-title {
-    font-size: 20px;
-  }
-
-  .subsection-title {
-    font-size: 18px;
-  }
-
-  .subsection-description {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-  .content-section {
-    padding: 15px;
-    margin: 15px;
-  }
-
-  .section-title {
-    font-size: 24px;
-  }
-
-  .subsection-title {
-    font-size: 20px;
-  }
-
-  .subsection-description {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 769px) {
-  .content-section {
-    padding: 20px;
-    margin: 20px;
-  }
-
-  .section-title {
-    font-size: 28px;
-  }
-
-  .subsection-title {
-    font-size: 22px;
-  }
-
-  .subsection-description {
-    font-size: 18px;
   }
 }

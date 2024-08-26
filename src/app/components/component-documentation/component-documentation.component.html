@@ -1,5 +1,24 @@
+[[
 <div class="wrapper">
   <h1 class="header-title">Components</h1>
+
+  <app-card
+    [iconClasses]="'fas fa-info-circle'"
+    [title]="'Banner'"
+    [subTitle]="'Component'"
+  >
+    <div body>
+      <app-banner></app-banner>
+    </div>
+  </app-card>
+
+  <app-card
+    [iconClasses]="'fas fa-info-circle'"
+    [title]="'Empty'"
+    [subTitle]="'Component'"
+  >
+  </app-card>
+
   <app-card
     [iconClasses]="'fas fa-info-circle'"
     [title]="'Accordion'"
@@ -148,13 +167,6 @@
         <p>Component Under Development</p>
       </div>
     </div>
-  </app-card>
-
-  <app-card
-    [iconClasses]="'fas fa-info-circle'"
-    [title]="'Empty'"
-    [subTitle]="'Component'"
-  >
   </app-card>
 
   <app-card
