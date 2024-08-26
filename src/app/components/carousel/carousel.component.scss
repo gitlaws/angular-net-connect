@@ -19,14 +19,46 @@ $slide-border-color: #ddd;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the carousel container */
-}
-
-.carousel__inner {
-  display: flex;
-  transition: transform 8s ease-in-out;
-  overflow: hidden;
-  position: relative;
   width: 100%;
+  max-width: 600px;
+  margin: auto;
+
+  &__inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.carousel__prev {
+      left: 10px;
+    }
+
+    &.carousel__next {
+      right: 10px;
+    }
+  }
 }
 
 .carousel__item {

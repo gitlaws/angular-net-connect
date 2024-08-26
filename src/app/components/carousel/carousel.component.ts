@@ -11,7 +11,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class CarouselComponent implements OnInit, OnDestroy {
   currentIndex = 0;
   intervalId: any;
-  readonly interval = 8000; // 4 seconds
+  readonly interval = 8000; // 8 seconds
   items = [
     {
       src: 'https://th.bing.com/th/id/OIG4.Xi5a.97_4DiriMNgneVr?pid=ImgGn',
@@ -32,22 +32,61 @@ export class CarouselComponent implements OnInit, OnDestroy {
   ];
 
   ngOnInit() {
+    this.startInterval();
+  }
+
+  ngOnDestroy() {
+    this.clearInterval();
+  }
+
+  startInterval() {
+    this.clearInterval();
     this.intervalId = setInterval(() => {
       this.nextSlide();
     }, this.interval);
   }
 
-  ngOnDestroy() {
+  clearInterval() {
     if (this.intervalId) {
       clearInterval(this.intervalId);
     }
   }
 
+  resetAnimation() {
+    const carouselInner = document.querySelector(
+      '.carousel__inner'
+    ) as HTMLElement;
+    if (carouselInner) {
+      carouselInner.style.animation = 'none';
+      carouselInner.offsetHeight; // Trigger reflow
+      carouselInner.style.animation = '';
+    }
+  }
+
   showSlide(index: number) {
     this.currentIndex = index;
+    this.resetAnimation();
+    this.startInterval();
   }
 
   nextSlide() {
     this.currentIndex = (this.currentIndex + 1) % this.items.length;
+    this.resetAnimation();
+    this.startInterval();
+  }
+
+  prevSlide() {
+    this.currentIndex =
+      (this.currentIndex - 1 + this.items.length) % this.items.length;
+    this.resetAnimation();
+    this.startInterval();
+  }
+
+  debounce(func: Function, wait: number) {
+    let timeout: any;
+    return (...args: any[]) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), wait);
+    };
   }
 }
