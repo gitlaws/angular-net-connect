@@ -5,9 +5,6 @@
 // $primary-color: #3498db;
 // $secondary-color: #2c3e50;
 
-$primary-color: #87ceeb;
-$secondary-color: #000080;
-
 // $primary-color: #008080;
 // $secondary-color: #191970;
 
@@ -59,20 +56,9 @@ $secondary-color: #000080;
 // $primary-color: #4169e1;
 // $secondary-color: #4682b4;
 
-.intro-image {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-}
-
+// Variables for colors and spacing
+$primary-color: #87ceeb;
+$secondary-color: #000080;
 $text-color: #fff;
 $shadow-color: rgba(0, 0, 0, 0.1);
 $spacing-unit: 20px;
@@ -97,7 +83,8 @@ $font-family: "Roboto", sans-serif;
 }
 
 .intro-section {
-  padding: 200px 0;
+  padding-top: 100px;
+  padding-bottom: 50px;
   background: linear-gradient(to right, $primary-color, $secondary-color);
   background-size: 200% 200%;
   text-align: center;
@@ -115,6 +102,7 @@ $font-family: "Roboto", sans-serif;
 .intro-headline {
   font-family: $font-family;
   font-size: 2.5rem;
+  padding-top: 50px;
   margin-bottom: $spacing-unit;
   color: $text-color;
   text-shadow: 0 4px 6px $shadow-color;
@@ -130,7 +118,22 @@ $font-family: "Roboto", sans-serif;
   font-size: 1.25rem;
   color: $text-color;
   line-height: 1.5;
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: 10px;
+}
+
+.intro-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px $shadow-color;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: $spacing-unit; // Added margin-top to space from .intro-description
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
 }
 
 // Responsive design
