@@ -83,8 +83,7 @@ $font-family: "Roboto", sans-serif;
 }
 
 .intro-section {
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding: 50px 0;
   background: linear-gradient(to right, $primary-color, $secondary-color);
   background-size: 200% 200%;
   text-align: center;
@@ -97,12 +96,12 @@ $font-family: "Roboto", sans-serif;
   align-items: center;
   text-align: center;
   padding: 0 $spacing-unit;
+  //   padding-top: 50px;
 }
 
 .intro-headline {
   font-family: $font-family;
   font-size: 2.5rem;
-  padding-top: 50px;
   margin-bottom: $spacing-unit;
   color: $text-color;
   text-shadow: 0 4px 6px $shadow-color;
@@ -129,11 +128,6 @@ $font-family: "Roboto", sans-serif;
   box-shadow: 0 4px 8px $shadow-color;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: $spacing-unit; // Added margin-top to space from .intro-description
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
 }
 
 // Responsive design
@@ -145,18 +139,26 @@ $font-family: "Roboto", sans-serif;
   .intro-description {
     font-size: 1rem;
   }
-}
 
-@media (max-width: 480px) {
-  .intro-section {
-    padding: 50px 0;
+  .intro-image {
+    max-width: 300px;
   }
 
-  .intro-headline {
-    font-size: 1.75rem;
-  }
+  @media (max-width: 480px) {
+    .intro-section {
+      padding-top: 50px;
+    }
 
-  .intro-description {
-    font-size: 0.875rem;
+    .intro-headline {
+      font-size: 1.75rem;
+    }
+
+    .intro-description {
+      font-size: 0.875rem;
+    }
+
+    .intro-image {
+      max-width: 200px;
+    }
   }
 }
