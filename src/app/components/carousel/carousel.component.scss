@@ -9,11 +9,16 @@ $slide-bg-color: #f5f5f5;
 $slide-border-color: #ddd;
 
 .carousel {
-  //   background-color: $primary-color;
+  background-color: $primary-color;
   padding: 20px;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the carousel container */
 }
 
 .carousel__inner {
@@ -21,6 +26,7 @@ $slide-border-color: #ddd;
   transition: transform 8s ease-in-out;
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 .carousel__item {
@@ -31,7 +37,7 @@ $slide-border-color: #ddd;
   border: 1px solid $slide-border-color;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for carousel items */
   min-width: 100%;
   display: flex;
   align-items: center;
@@ -39,13 +45,6 @@ $slide-border-color: #ddd;
   text-align: center;
   font-family: $font-family;
   color: $text-color;
-}
-
-.carousel__item--active {
-  border: 2px solid $secondary-color;
-  opacity: 1;
-  transform: scale(1.05);
-  transform: translateX(-100%);
 }
 
 .carousel__image {
@@ -66,6 +65,14 @@ $slide-border-color: #ddd;
   transform: translateY(-50%);
   font-size: 1.5rem;
   z-index: 1;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition for shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for control buttons */
 }
 
 .carousel__control--prev {
@@ -78,6 +85,7 @@ $slide-border-color: #ddd;
 
 .carousel__control:hover {
   background-color: darken($secondary-color, 10%);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 .carousel__indicators {
@@ -95,11 +103,13 @@ $slide-border-color: #ddd;
   border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition for shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for indicators */
 }
 
 .carousel__indicator--active {
   background-color: $highlight-color;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow for active indicator */
 }
 
 /* Uncomment for fade transition */
@@ -123,6 +133,19 @@ $slide-border-color: #ddd;
 }
 
 /* Responsiveness */
+@media (max-width: 1024px) {
+  .carousel {
+    padding: 15px;
+  }
+
+  .carousel__control {
+    padding: 8px;
+    font-size: 1.2rem;
+    width: 35px;
+    height: 35px;
+  }
+}
+
 @media (max-width: 768px) {
   .carousel {
     padding: 10px;
@@ -130,7 +153,14 @@ $slide-border-color: #ddd;
 
   .carousel__control {
     padding: 5px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    width: 30px;
+    height: 30px;
+  }
+
+  .carousel__indicator {
+    width: 8px;
+    height: 8px;
   }
 }
 
@@ -141,6 +171,13 @@ $slide-border-color: #ddd;
 
   .carousel__control {
     padding: 2px;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    width: 25px;
+    height: 25px;
+  }
+
+  .carousel__indicator {
+    width: 6px;
+    height: 6px;
   }
 }
