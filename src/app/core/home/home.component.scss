@@ -232,7 +232,7 @@
 }
 
 /* Define a color palette */
-$home-section-title-primary-color: #ff073a;
+$home-section-title-primary-color: #ffffff;
 $home-section-title-secondary-color: #1e90ff;
 $home-content-background-color: #1a1a1a;
 $home-list-text-color: #b3b3b3;
@@ -247,6 +247,7 @@ $link-hover-color: darken($link-color, 10%);
   align-items: center;
   min-height: 100vh;
   padding: 20px;
+  margin-top: 100px;
 }
 
 .content-section {
