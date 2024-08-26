@@ -3,13 +3,16 @@
 @import "../../../styles/_variables.scss";
 
 /* Define a color palette */
-$home-section-title-primary-color: #333333;
-$home-section-title-secondary-color: #3498db;
-$home-content-background-color: #ecf0f1;
-$home-list-text-color: #2c3e50;
-$home-content-border-color: #bdc3c7;
-$link-color: #2980b9;
-$link-hover-color: #1abc9c;
+$home-section-title-primary-color: $dark-color;
+$home-section-title-secondary-color: $accordion-header-color;
+$home-content-background-color: $main-bg-color;
+$home-list-text-color: $text-color;
+$home-content-border-color: $card-body-footer-color;
+$link-color: $accordion-header-color;
+$link-hover-color: $hover-color;
+$spacing-unit: 20px;
+$font-family-heading: "Arial", sans-serif;
+$font-family-body: "Arial", sans-serif;
 
 /* Content section styles */
 .section-wrapper {
@@ -17,19 +20,19 @@ $link-hover-color: #1abc9c;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
+  padding: $spacing-unit;
   margin-top: 50px;
 }
 
 .content-section {
   background-color: $home-content-background-color;
-  padding: 20px;
-  margin: 20px;
+  padding: $spacing-unit;
+  margin: $spacing-unit;
   border-radius: 8px;
   border: 1px solid $home-content-border-color;
   max-width: 1200px;
   width: 100%;
-  margin: 20px auto;
+  margin: $spacing-unit auto;
 }
 
 /* Section title styles */
@@ -38,10 +41,10 @@ $link-hover-color: #1abc9c;
   font-weight: bold;
   color: $home-section-title-primary-color;
   text-align: center;
-  margin-bottom: 20px;
-  font-family: "Roboto", sans-serif; /* Updated font */
-  letter-spacing: 0.5px; /* Adjust letter spacing */
-  line-height: 1.5; /* Adjust line spacing */
+  margin-bottom: $spacing-unit;
+  font-family: $font-family-heading;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
 }
 
 /* Subsection title styles */
@@ -49,38 +52,38 @@ $link-hover-color: #1abc9c;
   font-size: 22px;
   font-weight: bold;
   color: $home-section-title-secondary-color;
-  margin-top: 20px;
-  font-family: "Roboto", sans-serif; /* Updated font */
-  letter-spacing: 0.3px; /* Adjust letter spacing */
-  line-height: 1.4; /* Adjust line spacing */
+  margin-top: $spacing-unit;
+  font-family: $font-family-heading;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
 }
 
 /* Subsection description styles */
 .subsection-description {
   font-size: 18px;
   margin-bottom: 10px;
-  line-height: 1.8; /* Adjust line spacing */
+  line-height: 1.8;
   color: $home-list-text-color;
-  font-family: "Open Sans", sans-serif; /* Updated font */
-  letter-spacing: 0.2px; /* Adjust letter spacing */
+  font-family: $font-family-body;
+  letter-spacing: 0.2px;
 }
 
 /* List styles */
 .subsection-list {
-  margin-left: 20px;
+  margin-left: $spacing-unit;
   color: $home-list-text-color;
   list-style-type: disc;
-  padding-left: 20px;
-  line-height: 1.6; /* Adjust line spacing */
-  font-family: "Open Sans", sans-serif; /* Updated font */
+  padding-left: $spacing-unit;
+  line-height: 1.6;
+  font-family: $font-family-body;
 }
 
 /* Link styles */
 a {
   color: $link-color;
   text-decoration: underline;
-  letter-spacing: 0.1px; /* Adjust letter spacing */
-  font-family: "Roboto", sans-serif; /* Updated font */
+  letter-spacing: 0.1px;
+  font-family: $font-family-heading;
 
   &:hover {
     color: $link-hover-color;
