@@ -3,13 +3,13 @@
 @import "../../../styles/_variables.scss";
 
 /* Define a color palette */
-$home-section-title-primary-color: #ffffff;
-$home-section-title-secondary-color: #1e90ff;
-$home-content-background-color: #696969;
-$home-list-text-color: #b3b3b3;
-$home-content-border-color: #1a1a1a;
-$link-color: #1a73e8;
-$link-hover-color: darken($link-color, 10%);
+$home-section-title-primary-color: #333333;
+$home-section-title-secondary-color: #3498db;
+$home-content-background-color: #ecf0f1;
+$home-list-text-color: #2c3e50;
+$home-content-border-color: #bdc3c7;
+$link-color: #2980b9;
+$link-hover-color: #1abc9c;
 
 /* Content section styles */
 .section-wrapper {
@@ -18,7 +18,7 @@ $link-hover-color: darken($link-color, 10%);
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .content-section {
@@ -39,7 +39,7 @@ $link-hover-color: darken($link-color, 10%);
   color: $home-section-title-primary-color;
   text-align: center;
   margin-bottom: 20px;
-  font-family: "Lato", sans-serif; /* Updated font */
+  font-family: "Roboto", sans-serif; /* Updated font */
   letter-spacing: 0.5px; /* Adjust letter spacing */
   line-height: 1.5; /* Adjust line spacing */
 }
@@ -50,7 +50,7 @@ $link-hover-color: darken($link-color, 10%);
   font-weight: bold;
   color: $home-section-title-secondary-color;
   margin-top: 20px;
-  font-family: "Lato", sans-serif; /* Updated font */
+  font-family: "Roboto", sans-serif; /* Updated font */
   letter-spacing: 0.3px; /* Adjust letter spacing */
   line-height: 1.4; /* Adjust line spacing */
 }
@@ -60,8 +60,8 @@ $link-hover-color: darken($link-color, 10%);
   font-size: 18px;
   margin-bottom: 10px;
   line-height: 1.8; /* Adjust line spacing */
-  color: white;
-  font-family: "Merriweather", serif; /* Updated font */
+  color: $home-list-text-color;
+  font-family: "Open Sans", sans-serif; /* Updated font */
   letter-spacing: 0.2px; /* Adjust letter spacing */
 }
 
@@ -72,7 +72,7 @@ $link-hover-color: darken($link-color, 10%);
   list-style-type: disc;
   padding-left: 20px;
   line-height: 1.6; /* Adjust line spacing */
-  font-family: "Merriweather", serif; /* Updated font */
+  font-family: "Open Sans", sans-serif; /* Updated font */
 }
 
 /* Link styles */
@@ -80,7 +80,7 @@ a {
   color: $link-color;
   text-decoration: underline;
   letter-spacing: 0.1px; /* Adjust letter spacing */
-  font-family: "Lato", sans-serif; /* Updated font */
+  font-family: "Roboto", sans-serif; /* Updated font */
 
   &:hover {
     color: $link-hover-color;
