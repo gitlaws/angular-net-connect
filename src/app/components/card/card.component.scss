@@ -15,7 +15,7 @@
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
-    background-color: $card-header-color;
+    background-color: #34495e;
     color: white;
 
     .title {
@@ -29,6 +29,6 @@
   .body,
   .footer {
     padding: 10px;
-    background-color: $card-body-footer-color;
+    background-color: #f8f9fa;
   }
 }
