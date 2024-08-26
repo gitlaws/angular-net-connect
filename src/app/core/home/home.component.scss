@@ -42,35 +42,65 @@ $font-family-body: "Raleway", sans-serif;
 
 /* Section title styles */
 .section-title {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 1.75rem; // 28px
+  font-weight: 700;
   color: $home-section-title-primary-color;
   text-align: center;
   margin-bottom: $spacing-unit;
   font-family: $font-family-heading;
   letter-spacing: 0.5px;
   line-height: 1.5;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem; // 24px
+    font-weight: 600;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.25rem; // 20px
+    font-weight: 500;
+  }
 }
 
 /* Subsection title styles */
 .subsection-title {
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 1.375rem; // 22px
+  font-weight: 700;
   color: $home-section-title-secondary-color;
   margin-top: $spacing-unit;
   font-family: $font-family-heading;
   letter-spacing: 0.3px;
   line-height: 1.4;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem; // 20px
+    font-weight: 600;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.125rem; // 18px
+    font-weight: 500;
+  }
 }
 
 /* Subsection description styles */
 .subsection-description {
-  font-size: 18px;
+  font-size: 1.125rem; // 18px
   margin-bottom: 10px;
   line-height: 1.8;
   color: $home-list-text-color;
   font-family: $font-family-body;
   letter-spacing: 0.2px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem; // 16px
+    font-style: italic;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.875rem; // 14px
+    font-style: normal;
+  }
 }
 
 /* List styles */
@@ -81,6 +111,14 @@ $font-family-body: "Raleway", sans-serif;
   padding-left: $spacing-unit;
   line-height: 1.6;
   font-family: $font-family-body;
+
+  @media (max-width: 768px) {
+    font-size: 1rem; // 16px
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.875rem; // 14px
+  }
 }
 
 /* Link styles */
@@ -92,5 +130,13 @@ a {
 
   &:hover {
     color: $link-hover-color;
+  }
+
+  @media (max-width: 768px) {
+    font-weight: 600;
+  }
+
+  @media (max-width: 480px) {
+    font-weight: 500;
   }
 }
