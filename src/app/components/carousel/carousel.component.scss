@@ -18,14 +18,14 @@ $slide-border-color: #ddd;
 
 .carousel__inner {
   display: flex;
-  transition: transform 4s ease-in-out;
+  transition: transform 8s ease-in-out;
   overflow: hidden;
   position: relative;
 }
 
 .carousel__item {
   flex: 0 0 100%;
-  transition: transform 4s ease, opacity 4s ease;
+  transition: transform 8s ease, opacity 8s ease;
   opacity: 0.5;
   background-color: $slide-bg-color;
   border: 1px solid $slide-border-color;
@@ -107,7 +107,7 @@ $slide-border-color: #ddd;
   left: 0;
   width: 100%;
   opacity: 0;
-  transition: opacity 4s ease-in-out;
+  transition: opacity 8s ease-in-out;
 }
 
 .carousel__item--active {

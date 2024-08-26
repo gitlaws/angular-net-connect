@@ -11,7 +11,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class CarouselComponent implements OnInit, OnDestroy {
   currentIndex = 0;
   intervalId: any;
-  readonly interval = 4000; // 4 seconds
+  readonly interval = 8000; // 4 seconds
   items = [
     {
       src: 'https://th.bing.com/th/id/OIG4.Xi5a.97_4DiriMNgneVr?pid=ImgGn',
