@@ -2,6 +2,8 @@
 
 Angular Essentials is a modern single-page application (SPA) built with **Angular 18**, showcasing reusable UI components, dynamic routing, reactive forms, and advanced Angular features. Designed for developers, this interactive platform provides real-world implementations of Angular best practices.
 
+https://gitlaws.github.io/angular-net-connect/
+
 ---
 
 ## 🚀 Key Highlights
@@ -136,5 +138,3 @@ angular-essentials/
 │   └── environments/
 ├── tests/
 └── README.md
-
-https://gitlaws.github.io/angular-net-connect/
