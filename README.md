@@ -1,5 +1,5 @@
-Angular-Net-Connect: Component Library & Documentation Platform
-Angular-Net-Connect is a modern single-page application built with Angular 18, featuring a reusable component library and an interactive documentation platform. This project showcases advanced Angular features, robust UI/UX design, and production-ready development practices.
+Angular Essentials is a modern single-page application built with Angular 18, featuring a reusable component library and an interactive documentation platform. This project showcases advanced Angular features, robust UI/UX design, and production-ready development practices.
+
 Table of Contents
 
 Core Technical Skills
@@ -72,7 +72,7 @@ Modern Angular Patterns: Implemented standalone components, lazy loading, and re
 Developer Tools: Created utilities like copy directive, form validation, and data formatting.
 Code Quality Standards: Established maintainable code with TypeScript, testing, and modular design.
 
-Resume-Ready Highlights
+Highlights
 
 Developed a comprehensive Angular 18 component library with 15+ reusable UI components, TypeScript interfaces, and SCSS styling.
 Implemented advanced Angular features, including custom pipes, directives, and services with RxJS for reactive programming.
@@ -80,36 +80,3 @@ Built a responsive, accessible web application with lazy-loaded routing and opti
 Created a custom form validation system with reactive forms, credit card validation, and real-time feedback.
 Established a testing framework with Jasmine/Karma for comprehensive unit test coverage.
 Deployed a production application to GitHub Pages with an automated CI/CD pipeline.
-
-Getting Started
-
-Clone the Repository:git clone https://github.com/your-username/angular-net-connect.git
-
-
-Install Dependencies:npm install
-
-
-Run the Application:ng serve
-
-
-Build for Production:ng build --prod
-
-
-Deploy to GitHub Pages:ng deploy
-
-
-
-Project Structure
-angular-net-connect/
-├── src/
-│   ├── app/
-│   │   ├── components/         # Reusable UI components
-│   │   ├── pipes/             # Custom pipes
-│   │   ├── directives/        # Custom directives
-│   │   ├── services/          # Reusable services
-│   │   ├── models/            # TypeScript interfaces
-│   ├── assets/                # Static assets
-│   ├── styles/                # Modular SCSS files
-├── tests/                     # Jasmine/Karma test suites
-├── angular.json              # Angular CLI configuration
-├── package.json              # NPM dependencies
