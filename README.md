@@ -1,15 +1,5 @@
 Angular Essentials is a modern single-page application built with Angular 18, featuring a reusable component library and an interactive documentation platform. This project showcases advanced Angular features, robust UI/UX design, and production-ready development practices.
 
-Table of Contents
-
-Core Technical Skills
-Key Accomplishments
-Resume-Ready Highlights
-Getting Started
-Project Structure
-Contributing
-License
-
 Core Technical Skills
 Frontend Framework Expertise
 
